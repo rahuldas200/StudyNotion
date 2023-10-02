@@ -20,3 +20,6 @@ html,body {
     left: -3.2px;
     top: -5px;
 }
+.homepage_bg{
+    background-image: url(./assets/Images/bghome.svg);
+}

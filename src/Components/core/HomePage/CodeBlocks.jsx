@@ -57,8 +57,7 @@ const CodeBlocks = ({
                 </div>
                 <div className={`w-[90%] flex flex-col gap-2 font-bold ${text} font-mono  pr-2`}>
                     <TypeAnimation 
-                        sequence={[CodeBlocks ,1000]}
-                        cursorChar=">"
+                        sequence={[CodeBlocks ,1000]}  
                         repeat={Infinity}
                         omitDeletionAnimation = {true}
                     />
