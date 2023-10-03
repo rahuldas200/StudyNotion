@@ -8,6 +8,9 @@ import CodeBlocks from '../Components/core/HomePage/CodeBlocks'
 import Footer from '../Components/core/FooterSection/footer'
 import TimeLineSection from "../Components/core/HomePage/TimeLineSection"
 import LearningLengugeSection from '../Components/core/HomePage/LearningLengugeSection'
+import InstructorSection from '../Components/core/HomePage/InstructorSection'
+import ExploreMore from "../Components/core/HomePage/ExploreMore"
+
 
 function Home() {
 
@@ -54,7 +57,7 @@ function Home() {
 
             </div>
 
-            <div className='mx-3 my-16 max-w-2xl  rounded-md shadow-[-15px_-18px_156px_0px_#2c5282]'>
+            <div className='mx-3 my-16 max-w-2xl  rounded-md shadow-[-15px_-18px_156px_0px_#2c5282] sm:'>
                 <video
                 muted
                 loop
@@ -67,7 +70,7 @@ function Home() {
 
             <div>
                 <CodeBlocks
-                    position ={"lg:flex-row"}
+                    position ={"lg:flex-row sm:flex-col"}
                     heading ={
                         <div>
                             Unlock your 
@@ -129,16 +132,18 @@ function Home() {
                 />
             </div>
 
+            {/* explore Sectio */}
 
+            <ExploreMore/>
 
         </div>
 
 
         {/* section 2 */}
 
-        <div className='bg-pure-greys-5 text-richblack-700 '>
+        <div className='bg-pure-greys-5 text-richblack-700  mt-8'>
             {/* part 1 */}
-            <div className='homepage_bg h-[333px] flex justify-center'>
+            <div className='homepage_bg h-[333px] flex justify-center mt-10'>
                 <div className='w-11/12 max-w-maxContent flex items-center justify-center gap-5 max-auto'>
                     <div className='flex gap-7 text-white'>
                             <CTAButton active={true} linkto={"/signup"}>
@@ -183,10 +188,9 @@ function Home() {
                 
                 
             {/* part 3 */}
-                <TimeLineSection/>
-            {/* part 4 */}
                 <LearningLengugeSection/>
-
+            {/* part 4 */}
+                <TimeLineSection/>
 
             </div>
 
@@ -195,6 +199,19 @@ function Home() {
 
 
         {/* section 3 */}
+
+        <div className='w-12/11 mx-auto max-w-maxContent flex flex-col items-center justify-center gap-8
+               bg-richblack-900 text-white '>
+
+                <InstructorSection/>
+
+                <h2 className='text-center text-4Xl font-semibold mt-10 mb-6'>
+                    Review from other Learner
+                </h2>
+
+                {/* review slider */}
+
+        </div>
 
 
 

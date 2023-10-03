@@ -24,35 +24,35 @@ export const FooterLeftLink_2 = [
       links: [
         { 
           title: "Articles", 
-          link: "" 
+          // link: "" 
         },
         { 
           title: "Blog", 
-          link: "" 
+          // link: "" 
         },
         {
             title:"Chart Sheet",
-            link:""
+            // link:""
         },
         { 
             title: "Code challenges", 
-            link: "" 
+            // link: "" 
         },
         { 
             title: "Docs", 
-            link: "" 
+            // link: "" 
         },
         {
             title:"Projects",
-            link:""
+            // link:""
         },
         { 
             title: "Videos", 
-            link: "" 
+            // link: "" 
         },
         { 
             title: "Workspaces", 
-            link: "" 
+            // link: "" 
         }
         
       ],
@@ -67,7 +67,7 @@ export const FooterLeftLink_3 = [
       links: [
         { 
           title: "Help Center", 
-          link: "" 
+          // link: "" 
         },
 
       ],
@@ -81,15 +81,15 @@ export const FooterLeftLink_4 = [
       links: [
         { 
           title: "Paid memberships", 
-          link: "" 
+          // link: "" 
         },
         { 
           title: "For students", 
-          link: "" 
+          // link: "" 
         },
         {
             title:"Business solutions ",
-            link:""
+            // link:""
         }
         
       ],
@@ -105,15 +105,15 @@ export const FooterLeftLink_5 = [
       links: [
         { 
           title: "Forums ", 
-          link: "" 
+          // link: "" 
         },
         { 
           title: "Chapters", 
-          link: "" 
+          // link: "" 
         },
         {
             title:"Events ",
-            link:""
+            // link:""
         }
         
       ],

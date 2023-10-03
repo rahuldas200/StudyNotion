@@ -3,7 +3,11 @@ import FooterLogo from "../../../assets/Logo/Logo-Full-Light.png"
 import FooterComponent from './FooterComponent'
 import { FooterLink2 } from '../../../data/footer-links'
 import {FooterLeftLink_1 , FooterLeftLink_2 ,
-        FooterLeftLink_3 , FooterLeftLink_4 , FooterLeftLink_5 } from '../../../data/footer-left'
+        FooterLeftLink_3 , FooterLeftLink_4 , 
+        FooterLeftLink_5 } from '../../../data/footer-left'
+
+import {BsFacebook , BsGoogle , BsTwitter, BsYoutube} from 'react-icons/bs'
+
 
 const Nav = () => {
   return (
@@ -17,6 +21,12 @@ const Nav = () => {
                     <img src={FooterLogo} alt="" className='w-[10rem] h-8 ml-7' />
                     <div className=''>
                         <FooterComponent footerData = {FooterLeftLink_1} />
+                        <div className='flex gap-4 ml-7 mt-5'>
+                          <div className='text-blue-300 text-lg cursor-pointer'><BsFacebook/></div>
+                          <div className='text-lg cursor-pointer text-[#01A32F]'><BsGoogle/></div>
+                          <div className='text-blue-100 text-lg cursor-pointer'><BsTwitter></BsTwitter></div>
+                          <div className='text-[#F50303] text-lg cursor-pointer'><BsYoutube/></div>
+                        </div>
                     </div>
                 </div>
 
