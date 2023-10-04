@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function FooterComponent({footerData}) {
   return (
-    <footer className='text-white flex gap-16 ml-10'>
+    <footer className='text-white flex gap-16 ml-10 max-sm:ml-0 max-sm:gap-x-24 max-sm:gap-y-1 max-sm:flex-wrap '>
       {footerData.map((section, index) => (
 
         <div  key={index} className=''>

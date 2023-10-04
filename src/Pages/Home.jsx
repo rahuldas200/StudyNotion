@@ -19,7 +19,7 @@ function Home() {
         {/* section 1 */}
 
         <div className='relative mx-auto flex flex-col w-11/12 items-center
-            text-white max-w-maxContent'>
+            text-white max-w-maxContent max-sm:max-w-maxContentTab max-sm:items-start'>
 
             <Link to={"/signup"}>
 
@@ -34,19 +34,19 @@ function Home() {
 
             </Link>
 
-            <div className='text-center text-4xl font-semibold mt-4'>
+            <div className='text-center text-4xl font-semibold mt-4 max-sm:text-start'>
                 Empower Your Future with
                 <HighlightText text={"Coding Skills"}/>
             </div>
 
-            <div className='w-[90%] text-center text-lg font-bold text-richblack-300 mt-2'>
+            <div className='w-[90%] text-center text-lg font-bold text-richblack-300 mt-2 max-sm:text-start'>
                 With our online coding courses, you can learn at your own pace, 
                 from anywhere in the world, and get access to a wealth of resources, 
                 including hands-on projects, 
                 quizzes, and personalized feedback from instructors
             </div>
 
-            <div className='flex gap-7 mt-8'>
+            <div className='flex gap-7 mt-8 mx-auto'>
                 <CTAButton active={true} linkto={"/signup"}>
                     Learn More
                 </CTAButton>
@@ -70,7 +70,7 @@ function Home() {
 
             <div>
                 <CodeBlocks
-                    position ={"lg:flex-row sm:flex-col"}
+                    position ={"max-lg:flex-row max-sm:flex-col"}
                     heading ={
                         <div>
                             Unlock your 
@@ -103,7 +103,7 @@ function Home() {
             {/* code section 2 */}
             <div>
                 <CodeBlocks
-                    position ={"lg:flex-row-reverse"}
+                    position ={"lg:flex-row-reverse max-sm:flex-col"}
                     heading ={
                         <div>
                             Start coding <br/>
@@ -141,9 +141,10 @@ function Home() {
 
         {/* section 2 */}
 
-        <div className='bg-pure-greys-5 text-richblack-700  mt-8'>
+        <div className='bg-pure-greys-5 text-richblack-700  mt-8 
+            max-sm:max-w-maxContentTab max-sm:items-start'>
             {/* part 1 */}
-            <div className='homepage_bg h-[333px] flex justify-center mt-10'>
+            <div className='homepage_bg h-[333px] flex justify-center mt-10 '>
                 <div className='w-11/12 max-w-maxContent flex items-center justify-center gap-5 max-auto'>
                     <div className='flex gap-7 text-white'>
                             <CTAButton active={true} linkto={"/signup"}>
@@ -164,32 +165,37 @@ function Home() {
                 </div>
             </div>
 
-            {/* part 2 */}
+                {/* part 2 */}
             <div className='mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-center gap-7'>
-                <div className=' flex flex-row gap-14 my-12'>
-                    <div className='font-semibold text-4xl w-[45%] '>
+                <div className=' flex flex-row gap-14 my-12 max-sm:flex-col '>
+                    <div className='font-semibold text-4xl w-[45%] max-sm:w-full'>
                         Get the skills you need for a
                         <HighlightText text={"job that is in demand"}/>
                     </div>
 
-                    <div className='flex flex-col gap-10 w-[40%] items-start'>
+                    <div className='flex flex-col gap-10 w-[40%] items-start max-sm:w-full'>
                         <p className='text-[16px]'>
                             The modern StudyNotion is the dictates its own terms. Today, to be a competitive
-                            specialist requires more than professional skills.</p>
-                        <CTAButton active={true} linkto={"/signUp"}>
-                            <div>
-                                Learn more
-                            </div>
-                        </CTAButton>
+                            specialist requires more than professional skills.
+                        </p>
+                       
 
+                    </div>
+
+                    <div className='max-sm:flex max-sm:justify-center max-sm:items-center'>
+                            <CTAButton active={true} linkto={"/signUp"}>
+                                <div>
+                                    Learn more
+                                </div>
+                            </CTAButton>
                     </div>
 
                 </div>
                 
                 
-            {/* part 3 */}
+                {/* part 3 */}
                 <LearningLengugeSection/>
-            {/* part 4 */}
+                {/* part 4 */}
                 <TimeLineSection/>
 
             </div>
@@ -200,12 +206,13 @@ function Home() {
 
         {/* section 3 */}
 
-        <div className='w-12/11 mx-auto max-w-maxContent flex flex-col items-center justify-center gap-8
-               bg-richblack-900 text-white '>
+        <div className='w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-center gap-8
+               bg-richblack-900 text-white 
+               max-sm:max-w-maxContentTab'>
 
                 <InstructorSection/>
 
-                <h2 className='text-center text-4Xl font-semibold mt-10 mb-6'>
+                <h2 className='text-center text-4Xl font-semibold mt-10 mb-6 '>
                     Review from other Learner
                 </h2>
 

@@ -8,18 +8,18 @@ const CodeBlocks = ({
 }) => {
 
   return (
-    <div className={`flex ${position} py-24 px-32 justify-between gap-20`}>
+    <div className={`flex ${position} py-24 px-32 justify-between gap-20 max-sm:px-0 max-sm:w-full max-sm:py-6 max-sm:box-content max-sm:gap-10`}>
 
         {/* section 1 */}
-        <div className='w-[50%] flex flex-col gap-8 my-3 ml-4 p-1 '>
-            <div className='font-inter text-3xl'>
+        <div className='w-[50%] flex flex-col gap-8 my-3 ml-4 p-1 max-sm:w-[95%] max-sm:m-0 max-sm:p-0 max-sm:box-border'>
+            <div className='font-inter text-3xl max-sm:text-4xl'>
                 {heading}   
             </div>
-            <div className='text-richblack-300 font-bold'>
+            <div className='text-richblack-300 font-bold max-sm:text-base'>
                 {subhading}
             </div>
 
-            <div className='flex gap-7 mt-7'>
+            <div className='flex gap-7 mt-7 max-sm:items-center max-sm:justify-center'>
 
                 <CTAButton active={Catabtn1.active} link={Catabtn1.linkto}> 
                     <div className='flex gap-1 items-center'>
@@ -38,7 +38,7 @@ const CodeBlocks = ({
 
         {/* section 2 */}
 
-        <div className='text-[14px] w-[100%] h-[100%] lg:w-[500px] relative'>
+        <div className='text-[14px] w-[100%] h-[100%] lg:w-[500px] relative max-sm:w-[95%]'>
             <div className='w-[372.949px] h-[257.054px] codeBlockgradient  absolute'></div>
             {/* home hork - Bg greadient */}
             <div className='codeBlockColor pt-1 pb-1 flex my-3 mt-6 pr-10' >
