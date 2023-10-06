@@ -3,9 +3,14 @@ import { Link, matchPath } from 'react-router-dom'
 import logo from '../../../assets/Logo/Logo-Full-Light.png'
 import { NavbarLinks } from '../../../data/navbar-links'
 import { useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import {BsCartDash} from 'react-icons/bs'
 
 
 const Navbar = () => {
+  const {token} = useSelector( (state) => state.auth);
+  const {user} = useSelector( (state) => state.profile);
+  const {totalItems} = useSelector ( (state) => state.cart);
 
   const location = useLocation();
 
@@ -15,6 +20,7 @@ const Navbar = () => {
     return matchPath({path:route},location.pathname);
 
   }
+
 
   return (
     <div className='flex h-14 items-center justify-center border-b border-b-richblack-700'>
@@ -51,7 +57,21 @@ const Navbar = () => {
         {/* login | signup | dashbord */}
 
         <div className='flex gap-x-4 items-center'>
-              
+          {
+            user && user?.accountType !== "Instructor" && (
+              <Link to={'/dashbord/card'} className='relative'>
+                <BsCartDash/>
+                {
+                  totalItems > 0 && (
+                    <span>
+                      {totalItems}
+                    </span>
+                  )
+                }
+              </Link>
+            )
+          }
+          
         </div>
         
       </div>
