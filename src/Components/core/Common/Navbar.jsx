@@ -69,7 +69,7 @@ const Navbar = () => {
         {/* nav links */}
 
         <nav>
-          <ul className='flex gap-x-6 text-richblack-25'>
+          <ul className='flex gap-x-6 text-richblack-25 max-sm:hidden'>
             {
               NavbarLinks.map( (link , index) => {
                  return <li key={index}>

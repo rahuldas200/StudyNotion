@@ -1,10 +1,10 @@
 import React from 'react'
-import FooterLogo from "../../../assets/Logo/Logo-Full-Light.png"
+import FooterLogo from "../../../../assets/Logo/Logo-Small-Light.png"
 import FooterComponent from './FooterComponent'
-import { FooterLink2 } from '../../../data/footer-links'
+import { FooterLink2 } from '../../../../data/footer-links'
 import {FooterLeftLink_1 , FooterLeftLink_2 ,
         FooterLeftLink_3 , FooterLeftLink_4 , 
-        FooterLeftLink_5 } from '../../../data/footer-left'
+        FooterLeftLink_5 } from '../../../../data/footer-left'
 
 import {BsFacebook , BsGoogle , BsTwitter, BsYoutube} from 'react-icons/bs'
 
@@ -16,11 +16,11 @@ const Nav = () => {
                     {/* top section */}
             <div className='w-[100%] flex max-sm:w-fit max-sm:flex-col'>
                 {/* left section */}
-                <div className='w-[50%] flex gap-8 border-r-[1px] border-r-[#2C333F] 
+                <div className='w-[50%] flex gap-8 xl:border-r-[1px] border-r-[#2C333F] 
                     max-sm:flex-wrap max-sm:w-full max-sm:gap-x-12 max-sm:border-0'>
 
                     <div className='flex flex-col gap-3 max-sm:items-start'>
-                        <img src={FooterLogo} alt="" className='w-[10rem] h-8 ml-7 max-sm:ml-0' />
+                        <img src={FooterLogo} alt="" className='w-[5rem] h-5 ml-7 max-sm:ml-0' />
                         <div className=''>
                             <FooterComponent footerData = {FooterLeftLink_1} />
                             <div className='flex gap-4 ml-7 mt-5 max-sm:ml-0'>
