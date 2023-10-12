@@ -56,6 +56,8 @@ const Navbar = () => {
   }
 
 
+
+
   return (
     <div className='flex h-14 items-center justify-center border-b border-b-richblack-700'>
       <div className='flex w-11/12 max-w-maxContent items-center justify-between'>
@@ -137,10 +139,10 @@ const Navbar = () => {
           }
 
           {
-            token === null && (
+            token === null &&  (
               <Link to= {'/login'}>
                 <button className='border border-richblack-800 px-2 py-1 text-richblack-100 rounded-md shadow-[0px_0px_0px_2px_#319795]'>
-                  login
+                  Login
                 </button>
               </Link>
             )

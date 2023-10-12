@@ -21,7 +21,7 @@ const SignupForm = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const [showConformPassword, setShowConformPassword] = useState(false);
-    const [accountType, setAccountType] = useState("student");
+    const [accountType, setAccountType] = useState("Student");
 
     function changeHandler(event) {
 
