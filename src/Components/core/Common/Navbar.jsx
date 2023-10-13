@@ -83,19 +83,19 @@ const Navbar = () => {
                           <BsFillCaretDownFill/>
 
                           <div className='z-10 invisible absolute left-[50%] translate-x-[-50%] translate-y-[50%]  -top-5 flex flex-col rounded-md 
-                          bg-richblack-900 text-richblack-25 
+                          bg-white text-richblack-25 
                             opacity-0 transition-all duration-200 p-3 group-hover:visible
-                            group-hover:opacity-100 lg:max-w-[300px] w-[200px] shadow-[0px_0px_0px_2px_#319795] text-base'>
+                            group-hover:opacity-100 lg:max-w-[300px] w-[200px]  text-base'>
 
-                              {/* <div className='absolute left-[51%] top-1 h-5 w-6 rotate-45  bg-richblack-900
+                              <div className='absolute left-[51%] top-1 h-5 w-6 rotate-45 
                                 translate-x-[80%] translate-y-[-45%]'>
-                              </div> */}
+                              </div>
 
                               {
                                 sublinks.length ? (
                                   sublinks.map( (element , index) => {
                                     return <Link to={`${element.link}`} key={index}>
-                                      <div className='flex flex-col items-center my-[6px] py-1 shadow-[0px_0px_0px_2px_#319795] rounded-md'>
+                                      <div className='flex flex-col items-center my-[6px] py-1 text-richblack-900 rounded-md hover:bg-richblack-700 hover:text-richblack-25'>
                                         {element.title}
                                       </div>
                                     </Link>

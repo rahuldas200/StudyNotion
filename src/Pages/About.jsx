@@ -56,13 +56,13 @@ const About = () => {
 
                 <div className='flex gap-6 mt-8 lg:absolute -bottom-20  max-sm:invisible'>
                         <div>
-                            <img src={about1} alt="" />
+                            <img src={about1} alt="" className='rounded-md' />
                         </div>
                         <div>
-                            <img src={about2} alt="" />
+                            <img src={about2} alt="" className='rounded-md' />
                         </div>
                         <div>
-                            <img src={about3} alt="" />
+                            <img src={about3} alt="" className='rounded-md' />
                         </div>
                 </div>
             </div>

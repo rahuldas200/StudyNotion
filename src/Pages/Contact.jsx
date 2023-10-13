@@ -30,12 +30,12 @@ const Contact = () => {
   return (
     <div className='text-white'>
       <div className='w-11/12 mx-auto py-20 flex gap-14'>
-        <div className='w-[50%] h-full rounded-md'>
+        <div className='w-[40%] h-full rounded-md'>
             <div className='bg-richblack-800 rounded-md p-6 flex flex-col gap-4'>
                 {
                     contactData.map( (element , index) => {
                     return (
-                        <div key={index} className=' flex gap-3 p-3 items-center border border-richblack-600 rounded-lg'>
+                        <div key={index} className=' flex gap-3  items-center  rounded-lg'>
                             <p className='text-xl'>{element.icon}</p>
                             <div>
                                 <h1 className='text-lg text-richblack-100'>{element.name}</h1>
@@ -49,7 +49,7 @@ const Contact = () => {
             </div>
         </div>
 
-        <div className='p-14 flex flex-col gap-8 rounded-lg border border-richblack-600 mr-8'>
+        <div className='p-14 flex flex-col gap-8 rounded-lg border border-richblack-600 mr-20'>
             <div className='flex justify-center flex-col gap-2'>
                 <h1 className='text-4xl font-bold font-inter text-richblack-25'>Got a Idea? We’ve got the skills. Let’s team up</h1>
                 <p className='text-richblack-400'>Tall us more about yourself and what you’re got in mind.</p>

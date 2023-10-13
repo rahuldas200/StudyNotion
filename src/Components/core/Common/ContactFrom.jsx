@@ -25,6 +25,7 @@ const ContactFrom = () => {
         message:"",
     })
 
+
     const changeHandler = (e) => {
         setFormData( (prev) => (
             {
@@ -38,6 +39,7 @@ const ContactFrom = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData);
+        e.target.reset();
         
 
     }
@@ -100,7 +102,7 @@ const ContactFrom = () => {
                             <select
                                 value={selectedOption} 
                                 onChange={handleOptionChange}      
-                                className='py-4 px-3 max-w-[7rem] rounded-md bg-richblack-800 text-richblack-50'
+                                className='py-4 px-3 w-[4.8rem] rounded-md bg-richblack-800 text-richblack-50'
                             >         
                                 {
                                     countryCodes.map( (element , index) => {
@@ -109,7 +111,7 @@ const ContactFrom = () => {
                                                 value={element.code}
                                                 key={index}
                                             >
-                                                {`${element.country}`}
+                                                {`${element.code} - ${element.country} `}
                                             </option>
                                         )
                                     })

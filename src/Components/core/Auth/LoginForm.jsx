@@ -73,11 +73,11 @@ const LoginForm = () => {
             <span 
             className='absolute right-3 top-[38px] cursor-pointer'
             onClick={() => setShowPassword((prev) => !prev)}>
-                {showPassword ? 
+                {showPassword 
+                    ? (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)
+                    : (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>)
 
-                (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>) : 
-
-                (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
+                }
             </span>
 
             <Link to="/forgot-password">

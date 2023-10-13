@@ -9,9 +9,12 @@ import ForgotPassword from './Pages/ForgotPassword'
 import UpdatePassword from "./Pages/UpdatePassword";
 import Error from './Pages/Error'
 import VarifyEmail from './Pages/VarifyEmail'
-import Profile from "./Pages/Profile";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Myprofile from "./Components/core/Dashbord/Myprofile";
+import PrivateRoute from "./Components/core/Auth/PrivateRoute";
+import Dashbord from "./Pages/Dashbord"
+
 
 function App() {
   return (
@@ -48,14 +51,6 @@ function App() {
           }
         />
         <Route
-          path="dashboard/my-profile"
-          element={
-            <OpenRoute>
-              <Profile/>
-            </OpenRoute>
-          }
-        />
-        <Route
           path="forgot-password"
           element={
             <OpenRoute>
@@ -74,6 +69,22 @@ function App() {
             
           }
         />
+        <Route
+          element = {
+            <PrivateRoute>
+              <Dashbord/>
+            </PrivateRoute>         
+          }
+        >
+          <Route path="dashboard/my-profile"
+              element={
+                <Myprofile/>           
+              }
+          />
+
+        </Route>
+
+        
       </Routes>
     </div>
   );

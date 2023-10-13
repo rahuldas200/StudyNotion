@@ -13,7 +13,7 @@ import ExploreMore from "../Components/core/HomePage/ExploreMore"
 
 
 function Home() {
-
+    
   return (
     <div>
         {/* section 1 */}
