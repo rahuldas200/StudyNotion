@@ -13,7 +13,7 @@ const SideBar = () => {
     const {loading:authLoading} = useSelector ( (state) => state.auth)
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const [confirmationModal , setConfirmationModal] = useState(null)
+    const [ConfirmationMadal , setConfirmationModal] = useState(null)
     
 
     if(profileLoading || authLoading){
@@ -49,7 +49,7 @@ const SideBar = () => {
                         link={
                                 {
                                     name:"Settings" ,
-                                    path : "/dashbord/settings"
+                                    path : "/dashboard/settings"
                                 }
                             }
                         iconName={"VscSettingsGear"}
@@ -57,10 +57,10 @@ const SideBar = () => {
 
                     <button 
                         onClick={ () => setConfirmationModal({
-                            text1:"Are you Sure ?",
+                            text1:"Are you Sure?",
                             text2: "You will be logged out of your account",
-                            btn1text:"Logout",
-                            btn2text : " Cancle",
+                            btn1Text:"Log out",
+                            btn2Text :"Cancel",
                             btn1Handler : () => dispatch(logout(navigate)),
                             btn2Handler : () => setConfirmationModal(null)
                         })}
@@ -80,7 +80,7 @@ const SideBar = () => {
 
                 </div>
         </div>
-    {confirmationModal && <ConfarmationMadal modalData= {ConfarmationMadal} />}
+    {ConfirmationMadal && <ConfarmationMadal modalData= {ConfirmationMadal} />}
     </div>
   )
 }

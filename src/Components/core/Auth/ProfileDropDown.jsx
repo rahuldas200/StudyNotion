@@ -30,7 +30,7 @@ const ProfileDropDown = () => {
       {
         clicked ? (
           <div className= 'absolute z-10 top-12 -left-6 text-base  bg-richblack-800  flex flex-col gap-1 py-2 px-1 rounded-md'>
-            <div className='hover:bg-yellow-100 p-3  rounded-md cursor-pointer'>
+            <div className='hover:bg-yellow-100 p-3  rounded-md cursor-pointer' onClick={handleClick}>
               <Link to={"dashboard/my-profile"}
                 className='flex gap-3 items-center '>
                 <GiNetworkBars/>
@@ -38,7 +38,8 @@ const ProfileDropDown = () => {
               </Link>
             </div>
 
-            <div onClick={ () => dispatch(logout(navigate))}
+            <div onClick={ () => dispatch(logout(navigate)) }
+                  
               className='flex gap-3 items-center hover:bg-yellow-50 p-3 rounded-md cursor-pointer'>
               <CiLogout/>
               <p className='text-[#ED2121]'>Log out</p>

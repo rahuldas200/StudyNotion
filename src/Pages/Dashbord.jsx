@@ -22,7 +22,6 @@ const Dashbord = () => {
       <SideBar/>
 
       <div className='h-[calc(100vh-3.5rem)] w-full'>
-      {/* mx-auto w-11/12  max-w-[1000px]*/}
             <div className=''>
                 <Outlet/>
             </div>

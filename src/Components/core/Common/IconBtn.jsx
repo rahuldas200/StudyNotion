@@ -15,7 +15,7 @@ const IconBtn = ({
     disabled={disabled}
     onClick={onClick}
     type={type}
-    className='bg-yellow-50 px-5 py-2 text-base font-bold text-richblack-900 rounded-md'
+    className='bg-yellow-50 px-5 py-2 text-base font-bold text-richblack-900 rounded-md cursor-pointer'
     >
       {
         children ? (
@@ -26,8 +26,8 @@ const IconBtn = ({
                 {children}
             </>
             ) : (
-              <div className='flex gap-2 items-center'>
-                <FiEdit/>
+              <div className='flex gap-2 items-center '>
+                {/* <FiEdit/> */}
                 {text}
               </div>
             )

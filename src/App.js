@@ -14,6 +14,7 @@ import Contact from "./Pages/Contact";
 import Myprofile from "./Components/core/Dashbord/Myprofile";
 import PrivateRoute from "./Components/core/Auth/PrivateRoute";
 import Dashbord from "./Pages/Dashbord"
+import Settings from "./Components/core/Dashbord/Settings";
 
 
 function App() {
@@ -79,6 +80,12 @@ function App() {
           <Route path="dashboard/my-profile"
               element={
                 <Myprofile/>           
+              }
+          />
+
+          <Route path="dashboard/settings"
+              element={
+                <Settings/>         
               }
           />
 
