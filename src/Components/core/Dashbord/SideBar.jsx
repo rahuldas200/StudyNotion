@@ -6,6 +6,7 @@ import SideBarLink from './SideBarLink'
 import { VscSettingsGear, VscSignOut } from 'react-icons/vsc'
 import { useNavigate } from 'react-router-dom'
 import ConfarmationMadal from '../Common/ConfarmationMadal'
+import { VscThreeBars } from "react-icons/vsc";
 
 const SideBar = () => {
 
@@ -26,9 +27,8 @@ const SideBar = () => {
 
   return (
     <div className=''>
-      
-        <div className='flex min-w-[222px] flex-col border-r border-r-richblack-700
-            h-[calc(100vh-3.5rem)] bg-richblack-800 py-10'>
+        <div className=' flex min-w-[222px] flex-col border-r border-r-richblack-700
+            min-h-[calc(100vh-3.5rem)] h-full bg-richblack-800 py-10'>
                 <div className='flex flex-col'>
                     {
                         sidebarLinks.map( (link) => {

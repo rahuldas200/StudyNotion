@@ -2,10 +2,10 @@ import React from 'react'
 import IconBtn from './IconBtn'
 
 const ConfarmationMadal = ({modalData}) => {
-  console.log(modalData.btn1Text);
-  console.log(modalData.btn2Text);
+  console.log(modalData);
+    
   return (
-    <div className='text-black absolute top-0 bg-[#080e23d1]   w-full h-full flex justify-center items-center transition-transform'>
+    <div className='fixed top-0 left-0 text-richblack-900 bg-[#080e23d1] overscroll-none   w-screen h-screen flex justify-center items-center transition-transform z-10'>
       <div className='flex flex-col gap-2 w-[25%] bg-richblack-5 p-4 rounded-md -mt-16 overscroll-none '>
         <p className='text-black text-3xl text-center font-bold'>
             {modalData.text1}

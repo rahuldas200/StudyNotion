@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiArrowBack} from 'react-icons/bi'
 import { useSelector } from 'react-redux'
-import countryCodes from '../../../data/countrycode.json'
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import {RiDeleteBin5Line} from 'react-icons/ri'
+import SettingsProfileUpdate from './SettingsProfileUpdate';
+
 const Settings = () => {
 
     const {user} = useSelector( (state) => state.profile);
+    const [showCurrentPassword , setShowCurrentPassword] = useState(false);
+    const [showNewPassword , setShowNewPassword] = useState(false);
+
+   
 
   return (
-    <div className='text-white'>
+    <div className='text-white pb-7'>
+
         <div className='py-6 w-full pr-32 pl-6'>
             <div className='flex items-center gap-2'>
                 <BiArrowBack/>
@@ -19,13 +27,17 @@ const Settings = () => {
            
         </div>
 
-        <div className='h-full w-11/12 mx-auto flex flex-col ml-32 '>
-            <div className='w-[60%] bg-richblack-800 text-white flex  gap-5 p-6 rounded-md border border-richblack-600'>
+        <div className='h-full w-11/12 mx-auto flex flex-col  items-center gap-5'>
+
+            {/* PROFILE PART  */}
+
+            <div className='w-[60%]  bg-richblack-800 text-white flex  gap-5 p-6 rounded-md border border-richblack-600'>
                 <div>
-                    <img src={user?.image}
+                    <img src={user?.image} alt=''
                         className='w-[78px] object-cover rounded-full'
                     />
                 </div>
+
                 <div className='w-full flex gap-3 flex-col'>
                     <p className='text-base text-richblack-50'>Change Profile Picture</p>
                     <div className='flex justify-start'>
@@ -33,7 +45,7 @@ const Settings = () => {
                             for="file-upload" 
                             className='px-4 p-1 bg-yellow-50 rounded-md text-richblack-800 text-base'
                         >
-                                    Change
+                            Change
                         </label>
                         <input id="file-upload" type="file" className='invisible w-4'/>
 
@@ -45,113 +57,83 @@ const Settings = () => {
 
             </div>
 
-            <div className='flex flex-col gap-3 p-6 bg-richblack-800 w-[60%] mt-7 border border-richblack-600 rounded-md'>
-                <p className='text-richblack-5 text-lg'>Profile Information</p>
-                <div className='flex gap-3 '>
-                    <label className=' w-[50%] flex flex-col gap-[6px]'>
-                        <p className='text-sm'>Display Name</p>
+            {/* FORM PART */}
+            <SettingsProfileUpdate/>
+
+            {/* PASSWORD PART */}
+
+            <div className='w-[60%] bg-richblack-800 p-6 flex flex-col gap-3 border border-richblack-600 rounded-md'>
+                <p className='text-lg text-richblack-5'>Password</p>
+                <div className='flex gap-2 w-full'>
+                    <label htmlFor="" className='w-1/2 flex flex-col gap-[6px] text-sm relative'>
+                        <p className='text-sm text-richblack-5'>Current Password <sup className='text-sm text-[#ED2121]'>*</sup></p>
 
                         <input 
-                            type="text" 
-                            placeholder={"************"}
+                            type={`${showCurrentPassword ? "text" : "password"}`}
+                            placeholder=' Enter your old password'
                             className='bg-richblack-700 rounded-[0.5rem] text-richblack-5 w-full p-[12px]' 
 
                         />
-                        <p className='text-xs text-richblack-500'>Name entered above will be used for all issued certifies.</p>
-                    </label>
-                    <label className='w-[50%] flex flex-col gap-[6px]'>
-                        <p className='text-sm text-richblack-5'>Display Name</p>
-                        <select name="" id="" 
-                             className='bg-richblack-700 rounded-[0.5rem] text-richblack-5 w-full p-[14px]' 
+
+                        <span
+                            className='absolute top-9 text-xl right-2'
+                            onClick={() => setShowCurrentPassword( (prev) => (!prev))}
                         >
-                            <option value="WebDevelopment">Fontend Developer</option>
-                            <option value="WebDevelopment">Software Engineer</option>
-                            <option value="WebDevelopment">Android Developer</option>
-                            <option value="WebDevelopment">Ios Developer</option>
-                        </select>
+                            {
+                                showCurrentPassword
+                                ? (<AiOutlineEye/>)
+                                : (<AiOutlineEyeInvisible/>)
+                            }
+                        </span>
+
                     </label>
-                </div>
-                <div className='flex gap-3'>
-                    <label htmlFor=""
-                        className='w-[50%]'
-                    >
-                        <p className='text-sm text-richblack-5'>Date of Birth</p>
-                        <input type="date"
-                            
+
+                    <label htmlFor="" className='w-1/2 flex flex-col gap-[6px] text-sm relative'>
+                        <p className='text-sm text-richblack-5'>Change Password <sup className='text-sm text-[#ED2121]'>*</sup> </p>
+
+                        <input 
+                            type={`${showNewPassword ? "text" : "password"}`}
+                            placeholder='Enter your new password'
                             className='bg-richblack-700 rounded-[0.5rem] text-richblack-5 w-full p-[12px]' 
+
                         />
+                        <span
+                            className='text-xl absolute top-9 right-2'
+                            onClick={() => setShowNewPassword ( (prev) => (!prev))}
+                        >
+                            {
+                                showNewPassword
+                                ? (<AiOutlineEye/>)
+                                : (<AiOutlineEyeInvisible/>)
+                            }
+                        </span>
+                        
                     </label>
+                </div>
+            </div>
 
-                   <fieldset className='flex flex-col w-[50%]'>
-                        <p className='text-sm text-richblack-5'>Gender</p>
-                        <div className='flex justify-between bg-richblack-700 rounded-[0.5rem] p-3'>
-                            <label htmlFor="" className='flex gap-3'>
-                                <p >Male</p>
-                                <input type="radio" 
-                                    name='gender'
-                                    className='w-[20px]'
-                                />
-                            </label>
-                            <label htmlFor="" className='flex gap-3'>
-                                <p>Female</p>
-                                <input type="radio" 
-                                    name='gender'
-                                    className='w-[20px]'
-                                />
-                            </label>
-                            <label htmlFor="" className='flex gap-3'>
-                                <p>Other</p>
-                                <input type="radio" 
-                                    name='gender'
-                                    className='w-[20px] text-yellow-'
-                                />
-                            </label>
-                        </div>
-                   </fieldset>
+            {/* ACCOUNT DELETE PART */}
+            <div className='w-[60%] bg-pink-900 p-6 pr-36 flex gap-5 border border-pink-700 rounded-md'>
+                <div className='p-3 text-pink-200 bg-pink-700 h-12 rounded-full'>
+                    <RiDeleteBin5Line className='w-6 h-6'/>
                 </div>
 
-                <div className='flex gap-3 w-full'>
-                    <div className='w-[50%]'>
-                        <p className='text-sm text-richblack-5'>Phone number</p>
-                        <div className=' flex gap-2 w-full'>
-                        <select
-                                // value={selectedOption} 
-                                // onChange={handleOptionChange}      
-                                className='p-3 w-[4.8rem] rounded-md bg-richblack-700 text-richblack-50'
-                            >         
-                                {
-                                    countryCodes.map( (element , index) => {
-                                        return (
-                                            <option 
-                                                value={element.code}
-                                                key={index}
-                                            >
-                                                {`${element.code} - ${element.country} `}
-                                            </option>
-                                        )
-                                    })
-                                }
-
-                            </select> 
-
-                            <label htmlFor="" className='w-full'>
-                                <input 
-                                    type="number"
-                                    placeholder='12345 67890'
-                                    className='bg-richblack-700 rounded-[0.5rem] text-richblack-5 w-full p-[12px]' 
-                                />
-                            </label>
-
-                        </div>
+                <div className='flex flex-col gap-2'>
+                    <p  className='text-lg text-pink-5 font-bold'>Delete Account</p>
+                    <div className='text-sm text-pink-25 font-inter'>
+                        <p>Would you like to delete account?</p>
+                        <p>This account contains Paid Courses. Deleting your account will remove all the contain associated with it.</p>
                     </div>
-                    <label htmlFor="" className='w-1/2'>
-                        <p className='text-sm text-richblack-5'>About</p>
-                        <input type="text" 
-                            placeholder='Enter Bio Details'
-                           className='bg-richblack-700 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
-                        />
-                    </label>                   
+                    <p className='text-base font-[Italic] text-pink-600'>I want to delete my account.</p>
                 </div>
+            </div>
+
+            <div className='p-4  w-[60%] flex gap-6 justify-end'>
+                <button className='px-5 py-2 bg-richblack-800 rounded-md'>Cancel</button>
+                <button 
+                    className='px-5 py-2 bg-yellow-300 rounded-md text-richblack-900'>
+                    Save
+                </button>
             </div>
 
         </div>

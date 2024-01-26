@@ -3,7 +3,7 @@ import {setLoading ,setToken} from '../../slices/authSlice'
 import {resetCart} from '../../slices/cartSlice'
 import {setUser} from '../../slices/profileSlice'
 import {toast} from 'react-hot-toast'
-import {endpoints} from '../apis'
+import {endpoints,profileEndpoints} from '../apis'
 
 const {
     SENDOTP_API,
@@ -12,6 +12,11 @@ const {
     RESETPASSWORDTOKEN_API,
     RESETPASSWORD_API,
 } = endpoints
+
+// const {
+//   GET_USER_DETAILS_API,
+//   GET_ENROLLED_COURSES_API,
+// } = profileEndpoints
 
 
 export function sendOtp(email ,navigate){
@@ -125,9 +130,6 @@ export function login (email, password , navigate) {
     }
 }
 
-
-
-
 export function getPasswordResetToken(email, setEmailSent) {
     return async (dispatch) => {
       const toastId = toast.loading("Loading...")
@@ -152,7 +154,7 @@ export function getPasswordResetToken(email, setEmailSent) {
       toast.dismiss(toastId)
       dispatch(setLoading(false))
     }
-  }
+}
 
   export function resetPassword(password, confirmPassword, token, navigate) {
     return async (dispatch) => {
@@ -191,4 +193,5 @@ export function logout(navigate) {
       toast.success("Logged Out")
       navigate("/")
     }
-  }
+}
+

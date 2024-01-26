@@ -48,11 +48,9 @@ const SignupForm = () => {
             ...accountData,
             accountType
         }
-        console.log(finalData);
+
         dispatch(setSignupData(finalData));
         dispatch(sendOtp(formData.email,navigate))
-
-
 
     }
 

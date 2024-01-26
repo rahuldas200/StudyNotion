@@ -16,12 +16,13 @@ const Dashbord = () => {
         )
     }
 
-
+    // min-h[calc(100vh-3.5rem)]
+    // h-[calc(100vh-3.5rem)]
   return (
-    <div className='relative flex min-h[calc(100vh-3.5rem)]'>
+    <div className='flex relative'>
       <SideBar/>
 
-      <div className='h-[calc(100vh-3.5rem)] w-full'>
+      <div className='w-full'>
             <div className=''>
                 <Outlet/>
             </div>

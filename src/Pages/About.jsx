@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import HighlightText from '../Components/core/HomePage/HighlightText'
 import about1 from '../assets/Images/aboutus1.webp'
 import about2 from '../assets/Images/aboutus2.webp'
@@ -9,7 +9,7 @@ import CTAButton from '../Components/core/HomePage/Button'
 import Component2 from '../Components/core/AboutPage/Component2'
 import Footer from '../Components/core/Common/FooterSection/Footer'
 
-import countryCodes from '../data/countrycode.json'
+// import countryCodes from '../data/countrycode.json'
 import ContactFrom from '../Components/core/Common/ContactFrom'
 
 
