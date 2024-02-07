@@ -19,7 +19,7 @@ import EnrollCourses from "./Components/core/Dashbord/EnrollCourses";
 import Cart from "./Components/core/Dashbord/Cart";
 import { ACCOUNT_TYPE } from "./utils/constants";
 import { useSelector } from "react-redux";
-import Index from "./Components/core/Dashbord/addCourse/Index";
+import Index from "./Components/core/Dashbord/InstructorDashboard/Index";
 import Mycourse from './Components/core/Dashbord/Mycourse'
 
 
@@ -62,6 +62,7 @@ function App() {
               <>
                 <Route path="dashboard/my-courses" element={<Mycourse/>}/>
                 <Route path="dashboard/add-course" element={<Index/>}/>
+                <Route path="/dashboard/instructor" element={<Index/>}/>
               </>
             )
           }

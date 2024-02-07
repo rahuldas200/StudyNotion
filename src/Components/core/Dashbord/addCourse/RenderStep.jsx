@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { FaCheckCircle } from "react-icons/fa";
 import CourseInformationForm from './courseInformationForm/CourseInformationForm';
-import CourseBuilderForm from './courseInformationForm/CourseBuilder/CourseBuilderForm';
+import CourseBuilderForm from './CourseBuilder/CourseBuilderForm'
 import PublishForm from './publishCourse/PublishForm';
 
 const RenderStep = () => {
@@ -24,7 +24,6 @@ const RenderStep = () => {
   
 
   const {step,course,editCourse} = useSelector( (state) => state.course);
-  console.log(editCourse);
 
   return (
     <div className='flex flex-col gap-4'>

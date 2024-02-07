@@ -24,7 +24,7 @@ const ImageUpload = ({label,name,register,setValue,getvalues,errors,video,viewDa
   },[selectedFile]);
 
 
-  console.log(getvalues);
+  
   
   useEffect ( () => {
     if(viewData){

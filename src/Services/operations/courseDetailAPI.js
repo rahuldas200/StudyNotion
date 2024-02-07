@@ -12,6 +12,8 @@ const {
     UPDATE_SUB_SECTION_API,
     DELETE_SUB_SECTION_API,
     GET_ALL_COURSE_API,
+    UPADTE_COURSE_DETAILS_API,
+    GET_INSTRUCTOR_ALL_COURSE
     // GET_COURSE_DETAIL_API,
 } = courseEndpoints;
 
@@ -242,6 +244,57 @@ export const deleteCourseSubsection = async (data,token) => {
     return result;
 }
 
+export const editCourseDetails = async (data,token) => {
+    const toastId = toast.loading("Loading..");
+    let result = null;
 
+    try {
+        const response  = await apiConnector("POST",UPADTE_COURSE_DETAILS_API,data,{
+            Authorization: `Bearer ${token}`,
+        });
 
+        console.log("Edit Course api response", response);
+        if(!response?.data?.message){
+            throw new Error("updation faild due to server error");
+        }
+        toast.success(response?.data?.message);
+        result = response?.data?.data;
+
+    }catch (error) {
+        console.log("Edit course API error",error);
+        toast.error(error);
+    }
+
+    toast.dismiss(toastId);
+    return result;
+}
+
+export const fetchInstructorCourse = async (data,token) => {
+    const toastId = toast.loading("Loading....");
+    let result = null;
+    console.log(token);
+
+    try {
+        console.log("Fetching instructor courses...");
+        const response = await apiConnector("GET", GET_INSTRUCTOR_ALL_COURSE,data, {
+            Authorization: `Bearer ${token}`,
+        });
+
+        console.log("Instructor all course API response:", response);
+
+        if (!response?.data?.data) {
+            throw new Error("Could not fetch instructor courses due to server error");
+        }
+
+        toast.success(response.data.message);
+        result = response.data.data;
+    } catch (error) {
+        console.error("Error fetching instructor courses:", error);
+        toast.error(error.response?.data?.message || "An error occurred while fetching instructor courses");
+    }
+
+    toast.dismiss(toastId); // Dismiss the toast in both success and error cases
+    console.log("Fetched instructor courses:", result);
+    return result; // Return the fetched data
+};
 

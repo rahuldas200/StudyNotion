@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux';
 import { CiCirclePlus } from "react-icons/ci";
-import { addCourseSection ,updateCourseSection } from '../../../../../../Services/operations/courseDetailAPI';
-import { setCourse, setEditCourse, setStep } from '../../../../../../slices/courseSlice';
+import { addCourseSection ,updateCourseSection } from '../../../../../Services/operations/courseDetailAPI'
+import { setCourse, setEditCourse, setStep } from '../../../../../slices/courseSlice';
 import toast from "react-hot-toast";
 import NestedView from './NestedView';
 
@@ -61,8 +61,6 @@ const CourseBuilderForm = () => {
 
   }
 
-  console.log(editCourse)
-  console.log(course);
   
   const goBack = () => {
     dispatch(setStep(1));
@@ -70,21 +68,22 @@ const CourseBuilderForm = () => {
   }
 
   const goToNext = () => {
+    
     if(course.courseContent.length === 0){
       toast.error("please add atleast one section")
       return;
     }
-    if(course.courseContent.some( (section) => section.subSection === 0)){
+    if(course.courseContent.some( (section) => section.subSection.length === 0)){    
       toast.error("please add atleast one lecture in each section");
-      return;
+      return ;
     }
 
     // if every thing is good go to next step
-    dispatch(setStep(3));
-
+    
+     dispatch(setStep(3));
     //update Values
 
-   
+   return;
 
   }
 

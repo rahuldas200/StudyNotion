@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCourse } from '../../../../../../slices/courseSlice';
+import { setCourse } from '../../../../../slices/courseSlice';
 import { RxCross2 } from "react-icons/rx";
-import { createSubSection, updateSubSection } from '../../../../../../Services/operations/courseDetailAPI';
-import Upload from '../Upload';
+import { createSubSection, updateSubSection } from '../../../../../Services/operations/courseDetailAPI';
+import Upload from '../courseInformationForm/Upload';
 
 const SubSectionModal = ({
     modalData,
@@ -128,8 +128,8 @@ const SubSectionModal = ({
   return (
     <div className='fixed top-0 left-0 text-richblack-900 bg-[#080e23d1] overscroll-none  subSectionModal 
         w-screen h-screen flex justify-center items-center transition-transform '>
-        <div className='bg-richblack-800  w-[50%] border-richblack-600 border-[1px] rounded-md '>
-            <div className='flex justify-between py-6 px-4 bg-richblack-700 rounded-md'>
+        <div className='bg-richblack-800  w-[50%] border-richblack-600 border-[2px] rounded-md '>
+            <div className='flex justify-between py-6 px-4 bg-richblack-700 rounded-t-md'>
                 <p className='text-2xl text-richblack-50 font-semibold '>
                     {view && "Viewing"} 
                     {add && "Adding"} 

@@ -5,9 +5,9 @@ import { MdModeEdit , MdDelete } from "react-icons/md";
 import { BiSolidDownArrow } from "react-icons/bi";
 import { FaPlus } from "react-icons/fa";
 import SubSectionModal from './SubSectionModal';
-import ConfarmationMadal from '../../../../Common/ConfarmationMadal';
-import { setCourse } from '../../../../../../slices/courseSlice';
-import { deleteCourseSection , deleteCourseSubsection} from '../../../../../../Services/operations/courseDetailAPI';
+import ConfarmationMadal from '../../../Common/ConfarmationMadal'
+import { setCourse } from '../../../../../slices/courseSlice';
+import { deleteCourseSection , deleteCourseSubsection} from '../../../../../Services/operations/courseDetailAPI';
 
 
 const NestedView = ({handleChangeEditSectionName}) => {

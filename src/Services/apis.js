@@ -28,6 +28,8 @@ export const courseEndpoints = {
     DELETE_SUB_SECTION_API : BASE_URL+"/course/deleteSubSection",
     GET_ALL_COURSE_API : BASE_URL+"/course/getAllCourses",
     GET_COURSE_DETAIL_API : BASE_URL+"/course/getCourseDetails",
+    UPADTE_COURSE_DETAILS_API : BASE_URL+"/course/editCourse",
+    GET_INSTRUCTOR_ALL_COURSE : BASE_URL+"/course/getInstructorCourse"
 }
 
 export const categoriEndpoints = {
