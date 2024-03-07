@@ -1,67 +1,50 @@
-import {React,useState} from 'react'
-import frameImage from "../../../assets/Images/frame.png"
-import SignupForm from './SignupForm'
-import LoginForm from './LoginForm'
-import {FcGoogle} from "react-icons/fc"
+import { FcGoogle } from "react-icons/fc"
+import { useSelector } from "react-redux"
 
+import frameImg from "../../../assets/Images/frame.png"
+import LoginForm from "./LoginForm"
+import SignupForm from "./SignupForm"
 
-const Template = ({title, desc1, desc2, image, formtype, setIsLoggedIn}) => {
-
-    // console.log("ye rha mera form type");
-    // console.log(formtype)
+function Template({ title, description1, description2, image, formType }) {
+  const { loading } = useSelector((state) => state.auth)
 
   return (
-    <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12 gap-y-0 max-sm:max-w-maxContentTab max-sm:items-center max-sm:justify-center'>
-
-        <div className='w-11/12 max-w-[450px]' >
-            <h1
-            className='text-richblack-5 font-semibold text-[1.875rem] leading-[2.375rem]' 
-            >
-                {title}
+    <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
+      {loading ? (
+        <div className="spinner"></div>
+      ) : (
+        <div className="mx-auto flex w-11/12 max-w-maxContent flex-col-reverse justify-between gap-y-12 py-12 md:flex-row md:gap-y-0 md:gap-x-12">
+          <div className="mx-auto w-11/12 max-w-[450px] md:mx-0">
+            <h1 className="text-[1.875rem] font-semibold leading-[2.375rem] text-richblack-5">
+              {title}
             </h1>
-
-            <p className='text-[1.125rem] leading[1.625rem] mt-4' >
-                <span className='text-richblack-100'>{desc1}</span>
-                <br/>
-                <span className='text-blue-100 italic'>{desc2}</span>
+            <p className="mt-4 text-[1.125rem] leading-[1.625rem]">
+              <span className="text-richblack-100">{description1}</span>{" "}
+              <span className="font-edu-sa font-bold italic text-blue-100">
+                {description2}
+              </span>
             </p>
-
-            {formtype === "signup" ? 
-            (<SignupForm setIsLoggedIn={setIsLoggedIn}/>):
-            (<LoginForm setIsLoggedIn={setIsLoggedIn} />)}
-
-            <div className='flex w-full items-center my-4 gap-x-2'>
-                <div className='w-full h-[1px] bg-richblack-700'></div>
-                <p className='text-richblack-700 font-medium leading[1.375rem]'>
-                    OR
-                </p>
-                <div className='w-full h-[1px] bg-richblack-700'></div>
-            </div>
-
-            <button className='w-full flex justify-center items-center rounded-[8px] font-medium text-richblack-100
-            border border-richblack-700 px-[12px] py-[8px] gap-x-2 mt-6 '>
-                <FcGoogle/>
-                <p>Sign Up with Google</p>
-            </button>
-
+            {formType === "signup" ? <SignupForm /> : <LoginForm />}
+          </div>
+          <div className="relative mx-auto w-11/12 max-w-[450px] md:mx-0">
+            <img
+              src={frameImg}
+              alt="Pattern"
+              width={558}
+              height={504}
+              loading="lazy"
+            />
+            <img
+              src={image}
+              alt="Students"
+              width={558}
+              height={504}
+              loading="lazy"
+              className="absolute -top-4 right-4 z-10"
+            />
+          </div>
         </div>
-
-        <div className='relative w-11/12 max-w-[450px] max-sm:hidden '>
-            <img src={frameImage}
-                alt="Pattern"
-                width={558}
-                height={504}
-                loading="lazy"/>
-
-            <img src={image}
-                alt="Students"
-                width={558}
-                height={490}
-                loading="lazy"
-                className='absolute -top-4 right-4'
-                />    
-        </div>
-
+      )}
     </div>
   )
 }

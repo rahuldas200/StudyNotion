@@ -1,72 +1,32 @@
-import React from 'react'
-import Footer from '../Components/core/Common/FooterSection/Footer'
-import {BsFillChatRightTextFill} from 'react-icons/bs'
-import {IoEarth} from 'react-icons/io5'
-import {FiPhoneCall} from 'react-icons/fi'
-import ContactFrom from '../Components/core/Common/ContactFrom'
+import React from "react"
 
-const contactData = [
-    {
-        name:"Chat on us",
-        message:"Our friendly team is here to help.",
-        through:"@mail address",
-        icon:<BsFillChatRightTextFill/>
-    },
-    {
-        name:"Chat on us",
-        message:"Our friendly team is here to help.",
-        through:"@mail address",
-        icon:<IoEarth/>
-    },
-    {
-        name:"Chat on us",
-        message:"Our friendly team is here to help.",
-        through:"@mail address",
-        icon:<FiPhoneCall/>
-    }
-]
+import Footer from "../components/Common/Footer"
+import ReviewSlider from "../components/Common/ReviewSlider"
+import ContactDetails from "../components/core/ContactUsPage/ContactDetails"
+import ContactForm from "../components/core/ContactUsPage/ContactForm"
 
 const Contact = () => {
   return (
-    <div className='text-white'>
-      <div className='w-11/12 mx-auto py-20 flex gap-14'>
-        <div className='w-[40%] h-full rounded-md'>
-            <div className='bg-richblack-800 rounded-md p-6 flex flex-col gap-4'>
-                {
-                    contactData.map( (element , index) => {
-                    return (
-                        <div key={index} className=' flex gap-3  items-center  rounded-lg'>
-                            <p className='text-xl'>{element.icon}</p>
-                            <div>
-                                <h1 className='text-lg text-richblack-100'>{element.name}</h1>
-                                <p className='text-richblack-400'>{element.message}</p>
-                                <p className='text-richblack-400'>{element.through}</p>
-                            </div>
-                        </div>
-                    )
-                    })
-                }
-            </div>
+    <div>
+      <div className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white lg:flex-row">
+        {/* Contact Details */}
+        <div className="lg:w-[40%]">
+          <ContactDetails />
         </div>
 
-        <div className='p-14 flex flex-col gap-8 rounded-lg border border-richblack-600 mr-20'>
-            <div className='flex justify-center flex-col gap-2'>
-                <h1 className='text-4xl font-bold font-inter text-richblack-25'>Got a Idea? We’ve got the skills. Let’s team up</h1>
-                <p className='text-richblack-400'>Tall us more about yourself and what you’re got in mind.</p>
-            </div>
-            <div>
-                <ContactFrom/>
-            </div>
+        {/* Contact Form */}
+        <div className="lg:w-[60%]">
+          <ContactForm />
         </div>
       </div>
-
-      <div className='w-11/12 mx-auto'>
-        <h2 className='text-center text-4xl font-semibold mt-10 mb-6 '>
-                        Review from other Learner
-        </h2>
+      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+        {/* Reviws from Other Learner */}
+        <h1 className="text-center text-4xl font-semibold mt-8">
+          Reviews from other learners
+        </h1>
+        <ReviewSlider />
       </div>
-
-      <Footer/>
+      <Footer />
     </div>
   )
 }
