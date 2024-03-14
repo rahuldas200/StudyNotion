@@ -9,6 +9,7 @@ const {
   sendotp,
   changePassword,
 } = require("../controllers/Auth")
+
 const {
   resetPasswordToken,
   resetPassword,
