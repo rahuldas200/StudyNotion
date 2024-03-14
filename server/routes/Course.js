@@ -47,7 +47,7 @@ const {
 const {
   updateCourseProgress,
   getProgressPercentage,
-} = require("../controllers/courseProgress")
+} = require("../controllers/CourseProgress")
 // Importing Middlewares
 const { auth, isInstructor, isStudent, isAdmin } = require("../middleware/auth")
 
