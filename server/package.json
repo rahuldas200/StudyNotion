@@ -2,10 +2,10 @@
 	"name": "studynotion-backend",
 	"version": "1.0.0",
 	"description": "studynotion-backend",
-	"main": "main.js",
+	"main": "index.js",
 	"scripts": {
 		"start": "node main.js",
-		"dev": "nodemon main.js"
+		"dev": "nodemon index.js"
 	},
 	"keywords": [
 		"studynotion-backend"
