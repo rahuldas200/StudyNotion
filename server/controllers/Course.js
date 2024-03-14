@@ -1,12 +1,14 @@
 const Course = require("../models/Course")
 const Category = require("../models/Category")
 const Section = require("../models/Section")
-const SubSection = require("../models/subsection")
+const SubSection = require("../models/Subsection")
 const User = require("../models/User")
 const { uploadImageToCloudinary } = require("../utils/imageUploader")
 const CourseProgress = require("../models/CourseProgress")
 const { convertSecondsToDuration } = require("../utils/secToDuration")
+
 // Function to create a new course
+
 exports.createCourse = async (req, res) => {
   try {
     // Get user ID from request object
@@ -131,7 +133,9 @@ exports.createCourse = async (req, res) => {
     })
   }
 }
+
 // Edit Course Details
+
 exports.editCourse = async (req, res) => {
   try {
     const { courseId } = req.body
@@ -342,6 +346,7 @@ exports.getCourseDetails = async (req, res) => {
     })
   }
 }
+
 exports.getFullCourseDetails = async (req, res) => {
   try {
     const { courseId } = req.body
