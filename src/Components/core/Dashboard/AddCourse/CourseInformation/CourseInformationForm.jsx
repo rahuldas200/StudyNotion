@@ -2,7 +2,7 @@ import {
   addCourseDetails,
   editCourseDetails,
   fetchCourseCategories,
-} from "../../../../../services/Operations/courseDetailsAPI";
+} from "../../../../../Services/Operations/courseDetailsAPI";
 import { setCourse, setStep } from "../../../../../Slices/courseSlice";
 import { COURSE_STATUS } from "../../../../../Utils/constants";
 import IconBtn from "../../../../Common/IconBtn";

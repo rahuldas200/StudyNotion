@@ -1,4 +1,4 @@
-import { editCourseDetails } from "../../../../../services/Operations/courseDetailsAPI";
+import { editCourseDetails } from "../../../../../Services/Operations/courseDetailsAPI";
 import { resetCourseState, setStep } from "../../../../../Slices/courseSlice";
 import { COURSE_STATUS } from "../../../../../Utils/constants";
 import IconBtn from "../../../../Common/IconBtn";

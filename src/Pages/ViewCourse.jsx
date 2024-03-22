@@ -4,7 +4,7 @@ import { Outlet, useParams } from "react-router-dom"
 
 import CourseReviewModal from "../Components/core/ViewCourse/CourseReviewModal"
 import VideoDetailsSidebar from "../Components/core/ViewCourse/VideoDetailsSidebar"
-import { getFullDetailsOfCourse } from "../services/Operations/courseDetailsAPI"
+import { getFullDetailsOfCourse } from "../Services/Operations/courseDetailsAPI"
 import {
   setCompletedLectures,
   setCourseSectionData,

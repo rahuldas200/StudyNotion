@@ -1,4 +1,4 @@
-import { sendOtp } from "../../../services/Operations/authAPI";
+import { sendOtp } from "../../../Services/Operations/authAPI";
 import { setSignupData } from "../../../Slices/authSlice";
 import { ACCOUNT_TYPE } from "../../../Utils/constants";
 import Tab from "../../Common/Tab";

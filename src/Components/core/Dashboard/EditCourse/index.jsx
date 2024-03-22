@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 import {
   fetchCourseDetails,
   getFullDetailsOfCourse,
-} from "../../../../services/Operations/courseDetailsAPI"
+} from "../../../../Services/Operations/courseDetailsAPI"
 import { setCourse, setEditCourse } from "../../../../Slices/courseSlice"
 import RenderSteps from "../AddCourse/RenderSteps"
 

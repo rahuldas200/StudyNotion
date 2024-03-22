@@ -1,7 +1,7 @@
 import {
   createSection,
   updateSection,
-} from "../../../../../services/Operations/courseDetailsAPI";
+} from "../../../../../Services/Operations/courseDetailsAPI";
 import {
   setCourse,
   setEditCourse,

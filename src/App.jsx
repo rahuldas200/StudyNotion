@@ -27,7 +27,7 @@ import MyCourses from "./Components/core/Dashboard/MyCourses";
 import MyProfile from "./Components/core/Dashboard/MyProfile";
 import Settings from "./Components/core/Dashboard/Settings";
 import VideoDetails from "./Components/core/ViewCourse/VideoDetails";
-import { getUserDetails } from "./services/Operations/profileAPI";
+import { getUserDetails } from "./Services/Operations/profileAPI";
 import { ACCOUNT_TYPE } from "./Utils/constants";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
