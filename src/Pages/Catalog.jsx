@@ -3,7 +3,7 @@
 import Footer from "../Components/Common/Footer";
 import Course_Card from "../Components/core/Catalog/Course_Card";
 import Course_Slider from "../Components/core/Catalog/Course_Slider";
-import { apiConnector } from "../Services/apiConnector";
+import { apiConnector } from "../Services/apiconnector";
 import { categories } from "../Services/apis";
 import { getCatalogPageData } from "../Services/operations/pageAndComponntDatas";
 import Error from "./Error";

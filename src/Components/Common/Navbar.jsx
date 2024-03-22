@@ -1,4 +1,4 @@
-import { apiConnector } from "../../Services/apiConnector";
+import { apiConnector } from "../../Services/apiconnector";
 import { categories } from "../../Services/apis";
 import logo from "../../assets/Logo/Logo-Full-Light.png";
 import { NavbarLinks } from "../../data/navbar-links";
