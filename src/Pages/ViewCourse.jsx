@@ -1,5 +1,5 @@
-import CourseReviewModal from "../Components/core/ViewCourse/CourseReviewModal";
-import VideoDetailsSidebar from "../Components/core/ViewCourse/VideoDetailsSidebar";
+import CourseReviewModal from "../Components/Core/ViewCourse/CourseReviewModal";
+import VideoDetailsSidebar from "../Components/Core/ViewCourse/VideoDetailsSidebar";
 import { getFullDetailsOfCourse } from "../Services/operations/courseDetailsAPI";
 import {
   setCompletedLectures,

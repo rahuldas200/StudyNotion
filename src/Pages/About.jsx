@@ -4,11 +4,11 @@ import BannerImage2 from "../assets/Images/aboutus2.webp";
 import BannerImage3 from "../assets/Images/aboutus3.webp";
 import Footer from "../Components/Common/Footer";
 import ReviewSlider from "../Components/Common/ReviewSlider";
-import ContactFormSection from "../Components/core/AboutPage/ContactFormSection";
-import LearningGrid from "../Components/core/AboutPage/LearningGrid";
-import Quote from "../Components/core/AboutPage/Quote";
-import StatsComponenet from "../Components/core/AboutPage/Stats";
-import HighlightText from "../Components/core/HomePage/HighlightText";
+import ContactFormSection from "../Components/Core/AboutPage/ContactFormSection";
+import LearningGrid from "../Components/Core/AboutPage/LearningGrid";
+import Quote from "../Components/Core/AboutPage/Quote";
+import StatsComponenet from "../Components/Core/AboutPage/Stats";
+import HighlightText from "../Components/Core/HomePage/HighlightText";
 import React from "react";
 
 const About = () => {
