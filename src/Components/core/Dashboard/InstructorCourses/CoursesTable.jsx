@@ -1,4 +1,4 @@
-import { setCourse, setEditCourse } from "../../../../slices/courseSlice";
+import { setCourse, setEditCourse } from "../../../../Slices/courseSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
@@ -6,8 +6,8 @@ import { formatDate } from "../../../../services/formatDate";
 import {
   deleteCourse,
   fetchInstructorCourses,
-} from "../../../../services/operations/courseDetailsAPI";
-import { COURSE_STATUS } from "../../../../utils/constants";
+} from "../../../../services/Operations/courseDetailsAPI";
+import { COURSE_STATUS } from "../../../../Utils/constants";
 import ConfirmationModal from "../../../Common/ConfirmationModal";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";

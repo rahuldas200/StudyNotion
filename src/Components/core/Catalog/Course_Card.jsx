@@ -1,4 +1,4 @@
-import GetAvgRating from "../../../utils/avgRating";
+import GetAvgRating from "../../../Utils/avgRating";
 import RatingStars from "../../Common/RatingStars";
 import React, { useEffect, useState } from "react";
 // Icons

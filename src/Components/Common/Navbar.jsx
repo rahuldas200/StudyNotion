@@ -8,7 +8,7 @@ import logo from "../../assets/Logo/Logo-Full-Light.png"
 import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
-import { ACCOUNT_TYPE } from "../../utils/constants"
+import { ACCOUNT_TYPE } from "../../Utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
 
 const subLinks = [

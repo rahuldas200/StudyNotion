@@ -1,4 +1,4 @@
-import { formattedDate } from "../../../utils/dateFormatter";
+import { formattedDate } from "../../../Utils/dateFormatter";
 import IconBtn from "../../Common/IconBtn";
 import { RiEditBoxLine } from "react-icons/ri";
 import { useSelector } from "react-redux";

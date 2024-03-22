@@ -1,12 +1,12 @@
 import {
   createSection,
   updateSection,
-} from "../../../../../services/operations/courseDetailsAPI";
+} from "../../../../../services/Operations/courseDetailsAPI";
 import {
   setCourse,
   setEditCourse,
   setStep,
-} from "../../../../../slices/courseSlice";
+} from "../../../../../Slices/courseSlice";
 import IconBtn from "../../../../Common/IconBtn";
 import NestedView from "./NestedView";
 import { useState } from "react";

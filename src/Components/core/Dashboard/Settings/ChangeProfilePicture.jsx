@@ -1,4 +1,4 @@
-import { updateDisplayPicture } from "../../../../services/operations/SettingsAPI";
+import { updateDisplayPicture } from "../../../../services/Operations/SettingsAPI";
 import IconBtn from "../../../Common/IconBtn";
 import { useEffect, useRef, useState } from "react";
 import { FiUpload } from "react-icons/fi";

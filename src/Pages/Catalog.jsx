@@ -5,7 +5,7 @@ import Course_Card from "../Components/core/Catalog/Course_Card";
 import Course_Slider from "../Components/core/Catalog/Course_Slider";
 import { apiConnector } from "../services/apiConnector";
 import { categories } from "../services/apis";
-import { getCatalogPageData } from "../services/operations/pageAndComponntDatas";
+import { getCatalogPageData } from "../services/Operations/pageAndComponntDatas";
 import Error from "./Error";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";

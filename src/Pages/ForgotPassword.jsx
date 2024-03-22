@@ -3,7 +3,7 @@ import { BiArrowBack } from "react-icons/bi"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
-import { getPasswordResetToken } from "../services/operations/authAPI"
+import { getPasswordResetToken } from "../services/Operations/authAPI"
 
 function ForgotPassword() {
   const [email, setEmail] = useState("")

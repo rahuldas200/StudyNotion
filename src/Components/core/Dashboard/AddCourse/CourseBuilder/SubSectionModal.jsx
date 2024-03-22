@@ -1,8 +1,8 @@
 import {
   createSubSection,
   updateSubSection,
-} from "../../../../../services/operations/courseDetailsAPI";
-import { setCourse } from "../../../../../slices/courseSlice";
+} from "../../../../../services/Operations/courseDetailsAPI";
+import { setCourse } from "../../../../../Slices/courseSlice";
 import IconBtn from "../../../../Common/IconBtn";
 import Upload from "../Upload";
 import { useEffect, useState } from "react";

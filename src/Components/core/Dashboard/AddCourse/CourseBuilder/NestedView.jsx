@@ -1,8 +1,8 @@
 import {
   deleteSection,
   deleteSubSection,
-} from "../../../../../services/operations/courseDetailsAPI";
-import { setCourse } from "../../../../../slices/courseSlice";
+} from "../../../../../services/Operations/courseDetailsAPI";
+import { setCourse } from "../../../../../Slices/courseSlice";
 import ConfirmationModal from "../../../../Common/ConfirmationModal";
 import SubSectionModal from "./SubSectionModal";
 import { useState } from "react";

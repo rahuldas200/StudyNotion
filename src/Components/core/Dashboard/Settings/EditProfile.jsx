@@ -1,4 +1,4 @@
-import { updateProfile } from "../../../../services/operations/SettingsAPI";
+import { updateProfile } from "../../../../services/Operations/SettingsAPI";
 import IconBtn from "../../../Common/IconBtn";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";

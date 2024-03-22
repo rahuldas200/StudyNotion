@@ -1,4 +1,4 @@
-import { createRating } from "../../../services/operations/courseDetailsAPI";
+import { createRating } from "../../../services/Operations/courseDetailsAPI";
 import IconBtn from "../../Common/IconBtn";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";

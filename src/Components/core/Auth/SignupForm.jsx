@@ -1,6 +1,6 @@
-import { sendOtp } from "../../../services/operations/authAPI";
-import { setSignupData } from "../../../slices/authSlice";
-import { ACCOUNT_TYPE } from "../../../utils/constants";
+import { sendOtp } from "../../../services/Operations/authAPI";
+import { setSignupData } from "../../../Slices/authSlice";
+import { ACCOUNT_TYPE } from "../../../Utils/constants";
 import Tab from "../../Common/Tab";
 import { useState } from "react";
 import { toast } from "react-hot-toast";

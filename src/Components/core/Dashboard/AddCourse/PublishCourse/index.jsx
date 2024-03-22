@@ -1,6 +1,6 @@
-import { editCourseDetails } from "../../../../../services/operations/courseDetailsAPI";
-import { resetCourseState, setStep } from "../../../../../slices/courseSlice";
-import { COURSE_STATUS } from "../../../../../utils/constants";
+import { editCourseDetails } from "../../../../../services/Operations/courseDetailsAPI";
+import { resetCourseState, setStep } from "../../../../../Slices/courseSlice";
+import { COURSE_STATUS } from "../../../../../Utils/constants";
 import IconBtn from "../../../../Common/IconBtn";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
