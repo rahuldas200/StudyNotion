@@ -1,4 +1,4 @@
-import { addToCart } from "../../../Slices/cartSlice";
+import { addToCart } from "../../../slices/cartSlice";
 import { ACCOUNT_TYPE } from "../../../utils/constants";
 import copy from "copy-to-clipboard";
 import React from "react";

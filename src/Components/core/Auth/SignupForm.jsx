@@ -1,5 +1,5 @@
 import { sendOtp } from "../../../Services/operations/authAPI";
-import { setSignupData } from "../../../Slices/authSlice";
+import { setSignupData } from "../../../slices/authSlice";
 import { ACCOUNT_TYPE } from "../../../utils/constants";
 import Tab from "../../Common/Tab";
 import { useState } from "react";

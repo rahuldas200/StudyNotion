@@ -6,7 +6,7 @@ import {
   setCourseSectionData,
   setEntireCourseData,
   setTotalNoOfLectures,
-} from "../Slices/viewCourseSlice";
+} from "../slices/viewCourseSlice";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useParams } from "react-router-dom";

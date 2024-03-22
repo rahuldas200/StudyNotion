@@ -2,7 +2,7 @@ import {
   createSubSection,
   updateSubSection,
 } from "../../../../../Services/operations/courseDetailsAPI";
-import { setCourse } from "../../../../../Slices/courseSlice";
+import { setCourse } from "../../../../../slices/courseSlice";
 import IconBtn from "../../../../Common/IconBtn";
 import Upload from "../Upload";
 import { useEffect, useState } from "react";

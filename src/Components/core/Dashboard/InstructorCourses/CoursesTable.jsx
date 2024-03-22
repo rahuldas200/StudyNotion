@@ -1,4 +1,4 @@
-import { setCourse, setEditCourse } from "../../../../Slices/courseSlice";
+import { setCourse, setEditCourse } from "../../../../slices/courseSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";

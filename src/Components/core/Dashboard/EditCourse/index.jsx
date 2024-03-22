@@ -2,7 +2,7 @@ import {
   fetchCourseDetails,
   getFullDetailsOfCourse,
 } from "../../../../Services/operations/courseDetailsAPI";
-import { setCourse, setEditCourse } from "../../../../Slices/courseSlice";
+import { setCourse, setEditCourse } from "../../../../slices/courseSlice";
 import RenderSteps from "../AddCourse/RenderSteps";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

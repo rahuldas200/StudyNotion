@@ -1,5 +1,5 @@
 import { editCourseDetails } from "../../../../../Services/operations/courseDetailsAPI";
-import { resetCourseState, setStep } from "../../../../../Slices/courseSlice";
+import { resetCourseState, setStep } from "../../../../../slices/courseSlice";
 import { COURSE_STATUS } from "../../../../../utils/constants";
 import IconBtn from "../../../../Common/IconBtn";
 import { useEffect, useState } from "react";

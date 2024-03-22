@@ -2,7 +2,7 @@ import {
   deleteSection,
   deleteSubSection,
 } from "../../../../../Services/operations/courseDetailsAPI";
-import { setCourse } from "../../../../../Slices/courseSlice";
+import { setCourse } from "../../../../../slices/courseSlice";
 import ConfirmationModal from "../../../../Common/ConfirmationModal";
 import SubSectionModal from "./SubSectionModal";
 import { useState } from "react";
