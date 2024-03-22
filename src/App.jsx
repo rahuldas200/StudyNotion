@@ -1,54 +1,51 @@
-import { useEffect } from "react"
-import "./App.css"
-// Redux
-import { useDispatch, useSelector } from "react-redux"
-// React Router
-import { Route, Routes, useNavigate } from "react-router-dom"
-
-// Components
-import Navbar from "./components/Common/Navbar"
-import OpenRoute from "./components/core/Auth/OpenRoute"
-import PrivateRoute from "./components/core/Auth/PrivateRoute"
-import AddCourse from "./components/core/Dashboard/AddCourse"
-import Cart from "./components/core/Dashboard/Cart"
-import EditCourse from "./components/core/Dashboard/EditCourse"
-import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses"
-import Instructor from "./components/core/Dashboard/Instructor"
-import MyCourses from "./components/core/Dashboard/MyCourses"
-import MyProfile from "./components/core/Dashboard/MyProfile"
-import Settings from "./components/core/Dashboard/Settings"
-import VideoDetails from "./components/core/ViewCourse/VideoDetails"
-
-import Catalog from "./Pages/Catalog"
-import Contact from "./Pages/Contact"
-import CourseDetails from "./Pages/CourseDetails"
-import Dashboard from "./Pages/Dashboard"
-import Error from './Pages/Error'
-import ForgotPassword from "./Pages/ForgotPassword"
+import { useEffect } from "react";
+import "./App.css";
+import About from "./Pages/About";
+import Catalog from "./Pages/Catalog";
+import Contact from "./Pages/Contact";
+import CourseDetails from "./Pages/CourseDetails";
+import Dashboard from "./Pages/Dashboard";
+import Error from "./Pages/Error";
+import ForgotPassword from "./Pages/ForgotPassword";
 // Pages
-import Home from "./Pages/Home"
-import About from "./Pages/About"
-import Login from "./Pages/Login"
-import Signup from "./Pages/Signup"
-import UpdatePassword from "./Pages/UpdatePassword"
-import VerifyEmail from "./Pages/VerifyEmail"
-import ViewCourse from "./Pages/ViewCourse"
-import { getUserDetails } from "./services/operations/profileAPI"
-import { ACCOUNT_TYPE } from "./utils/constants"
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import UpdatePassword from "./Pages/UpdatePassword";
+import VerifyEmail from "./Pages/VerifyEmail";
+import ViewCourse from "./Pages/ViewCourse";
+// Components
+import Navbar from "./components/common/Navbar";
+import OpenRoute from "./components/core/Auth/OpenRoute";
+import PrivateRoute from "./components/core/Auth/PrivateRoute";
+import AddCourse from "./components/core/Dashboard/AddCourse";
+import Cart from "./components/core/Dashboard/Cart";
+import EditCourse from "./components/core/Dashboard/EditCourse";
+import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
+import Instructor from "./components/core/Dashboard/Instructor";
+import MyCourses from "./components/core/Dashboard/MyCourses";
+import MyProfile from "./components/core/Dashboard/MyProfile";
+import Settings from "./components/core/Dashboard/Settings";
+import VideoDetails from "./components/core/ViewCourse/VideoDetails";
+import { getUserDetails } from "./services/operations/profileAPI";
+import { ACCOUNT_TYPE } from "./utils/constants";
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+// React Router
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 function App() {
-  
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const { user } = useSelector((state) => state.profile)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.profile);
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
-      const token = JSON.parse(localStorage.getItem("token"))
-      dispatch(getUserDetails(token, navigate))
+      const token = JSON.parse(localStorage.getItem("token"));
+      dispatch(getUserDetails(token, navigate));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   return (
     <div className="flex min-h-screen w-screen flex-col bg-richblack-900 font-inter">
@@ -158,7 +155,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

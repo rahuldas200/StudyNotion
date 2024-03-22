@@ -1,42 +1,41 @@
-import { useEffect, useState } from "react"
-import { BsChevronDown } from "react-icons/bs"
-import { IoIosArrowBack } from "react-icons/io"
-import { useSelector } from "react-redux"
-import { useLocation, useNavigate, useParams } from "react-router-dom"
-
-import IconBtn from "../../Common/IconBtn"
+import IconBtn from "../../common/IconBtn";
+import { useEffect, useState } from "react";
+import { BsChevronDown } from "react-icons/bs";
+import { IoIosArrowBack } from "react-icons/io";
+import { useSelector } from "react-redux";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 export default function VideoDetailsSidebar({ setReviewModal }) {
-  const [activeStatus, setActiveStatus] = useState("")
-  const [videoBarActive, setVideoBarActive] = useState("")
-  const navigate = useNavigate()
-  const location = useLocation()
-  const { sectionId, subSectionId } = useParams()
+  const [activeStatus, setActiveStatus] = useState("");
+  const [videoBarActive, setVideoBarActive] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { sectionId, subSectionId } = useParams();
   const {
     courseSectionData,
     courseEntireData,
     totalNoOfLectures,
     completedLectures,
-  } = useSelector((state) => state.viewCourse)
+  } = useSelector((state) => state.viewCourse);
 
   useEffect(() => {
-    ;(() => {
-      if (!courseSectionData.length) return
+    (() => {
+      if (!courseSectionData.length) return;
       const currentSectionIndx = courseSectionData.findIndex(
         (data) => data._id === sectionId
-      )
+      );
       const currentSubSectionIndx = courseSectionData?.[
         currentSectionIndx
-      ]?.subSection.findIndex((data) => data._id === subSectionId)
+      ]?.subSection.findIndex((data) => data._id === subSectionId);
       const activeSubSectionId =
         courseSectionData[currentSectionIndx]?.subSection?.[
           currentSubSectionIndx
-        ]?._id
-      setActiveStatus(courseSectionData?.[currentSectionIndx]?._id)
-      setVideoBarActive(activeSubSectionId)
-    })()
+        ]?._id;
+      setActiveStatus(courseSectionData?.[currentSectionIndx]?._id);
+      setVideoBarActive(activeSubSectionId);
+    })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [courseSectionData, courseEntireData, location.pathname])
+  }, [courseSectionData, courseEntireData, location.pathname]);
 
   return (
     <>
@@ -45,7 +44,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
           <div className="flex w-full items-center justify-between ">
             <div
               onClick={() => {
-                navigate(`/dashboard/enrolled-courses`)
+                navigate(`/dashboard/enrolled-courses`);
               }}
               className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-richblack-100 p-1 text-richblack-700 hover:scale-90"
               title="back"
@@ -108,8 +107,8 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
                       onClick={() => {
                         navigate(
                           `/view-course/${courseEntireData?._id}/section/${course?._id}/sub-section/${topic?._id}`
-                        )
-                        setVideoBarActive(topic._id)
+                        );
+                        setVideoBarActive(topic._id);
                       }}
                     >
                       <input
@@ -127,5 +126,5 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
         </div>
       </div>
     </>
-  )
+  );
 }

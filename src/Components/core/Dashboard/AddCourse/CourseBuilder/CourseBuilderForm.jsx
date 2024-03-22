@@ -1,21 +1,20 @@
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { toast } from "react-hot-toast"
-import { IoAddCircleOutline } from "react-icons/io5"
-import { MdNavigateNext } from "react-icons/md"
-import { useDispatch, useSelector } from "react-redux"
-
 import {
   createSection,
   updateSection,
-} from "../../../../../services/operations/courseDetailsAPI"
+} from "../../../../../services/operations/courseDetailsAPI";
 import {
   setCourse,
   setEditCourse,
   setStep,
-} from "../../../../../slices/courseSlice"
-import IconBtn from "../../../../Common/IconBtn"
-import NestedView from "./NestedView"
+} from "../../../../../slices/courseSlice";
+import IconBtn from "../../../../common/IconBtn";
+import NestedView from "./NestedView";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import { IoAddCircleOutline } from "react-icons/io5";
+import { MdNavigateNext } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function CourseBuilderForm() {
   const {
@@ -23,20 +22,20 @@ export default function CourseBuilderForm() {
     handleSubmit,
     setValue,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
-  const { course } = useSelector((state) => state.course)
-  const { token } = useSelector((state) => state.auth)
-  const [loading, setLoading] = useState(false)
-  const [editSectionName, setEditSectionName] = useState(null)
-  const dispatch = useDispatch()
+  const { course } = useSelector((state) => state.course);
+  const { token } = useSelector((state) => state.auth);
+  const [loading, setLoading] = useState(false);
+  const [editSectionName, setEditSectionName] = useState(null);
+  const dispatch = useDispatch();
 
   // handle form submission
   const onSubmit = async (data) => {
     // console.log(data)
-    setLoading(true)
+    setLoading(true);
 
-    let result
+    let result;
 
     if (editSectionName) {
       result = await updateSection(
@@ -46,7 +45,7 @@ export default function CourseBuilderForm() {
           courseId: course._id,
         },
         token
-      )
+      );
       // console.log("edit", result)
     } else {
       result = await createSection(
@@ -55,49 +54,49 @@ export default function CourseBuilderForm() {
           courseId: course._id,
         },
         token
-      )
+      );
     }
     if (result) {
       // console.log("section result", result)
-      dispatch(setCourse(result))
-      setEditSectionName(null)
-      setValue("sectionName", "")
+      dispatch(setCourse(result));
+      setEditSectionName(null);
+      setValue("sectionName", "");
     }
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   const cancelEdit = () => {
-    setEditSectionName(null)
-    setValue("sectionName", "")
-  }
+    setEditSectionName(null);
+    setValue("sectionName", "");
+  };
 
   const handleChangeEditSectionName = (sectionId, sectionName) => {
     if (editSectionName === sectionId) {
-      cancelEdit()
-      return
+      cancelEdit();
+      return;
     }
-    setEditSectionName(sectionId)
-    setValue("sectionName", sectionName)
-  }
+    setEditSectionName(sectionId);
+    setValue("sectionName", sectionName);
+  };
 
   const goToNext = () => {
     if (course.courseContent.length === 0) {
-      toast.error("Please add atleast one section")
-      return
+      toast.error("Please add atleast one section");
+      return;
     }
     if (
       course.courseContent.some((section) => section.subSection.length === 0)
     ) {
-      toast.error("Please add atleast one lecture in each section")
-      return
+      toast.error("Please add atleast one lecture in each section");
+      return;
     }
-    dispatch(setStep(3))
-  }
+    dispatch(setStep(3));
+  };
 
   const goBack = () => {
-    dispatch(setStep(1))
-    dispatch(setEditCourse(true))
-  }
+    dispatch(setStep(1));
+    dispatch(setEditCourse(true));
+  };
 
   return (
     <div className="space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6">
@@ -156,5 +155,5 @@ export default function CourseBuilderForm() {
         </IconBtn>
       </div>
     </div>
-  )
+  );
 }

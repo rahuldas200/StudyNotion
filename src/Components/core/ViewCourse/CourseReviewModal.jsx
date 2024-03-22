@@ -1,34 +1,33 @@
-import { useEffect } from "react"
-import { useForm } from "react-hook-form"
-import { RxCross2 } from "react-icons/rx"
-import ReactStars from "react-rating-stars-component"
-import { useSelector } from "react-redux"
-
-import { createRating } from "../../../services/operations/courseDetailsAPI"
-import IconBtn from "../../Common/IconBtn"
+import { createRating } from "../../../services/operations/courseDetailsAPI";
+import IconBtn from "../../common/IconBtn";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { RxCross2 } from "react-icons/rx";
+import ReactStars from "react-rating-stars-component";
+import { useSelector } from "react-redux";
 
 export default function CourseReviewModal({ setReviewModal }) {
-  const { user } = useSelector((state) => state.profile)
-  const { token } = useSelector((state) => state.auth)
-  const { courseEntireData } = useSelector((state) => state.viewCourse)
+  const { user } = useSelector((state) => state.profile);
+  const { token } = useSelector((state) => state.auth);
+  const { courseEntireData } = useSelector((state) => state.viewCourse);
 
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
   useEffect(() => {
-    setValue("courseExperience", "")
-    setValue("courseRating", 0)
+    setValue("courseExperience", "");
+    setValue("courseRating", 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   const ratingChanged = (newRating) => {
     // console.log(newRating)
-    setValue("courseRating", newRating)
-  }
+    setValue("courseRating", newRating);
+  };
 
   const onSubmit = async (data) => {
     await createRating(
@@ -38,9 +37,9 @@ export default function CourseReviewModal({ setReviewModal }) {
         review: data.courseExperience,
       },
       token
-    )
-    setReviewModal(false)
-  }
+    );
+    setReviewModal(false);
+  };
 
   return (
     <div className="fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm">
@@ -109,5 +108,5 @@ export default function CourseReviewModal({ setReviewModal }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
