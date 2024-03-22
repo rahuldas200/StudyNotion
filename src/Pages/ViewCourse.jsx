@@ -1,38 +1,37 @@
-import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { Outlet, useParams } from "react-router-dom"
-
-import CourseReviewModal from "../Components/core/ViewCourse/CourseReviewModal"
-import VideoDetailsSidebar from "../Components/core/ViewCourse/VideoDetailsSidebar"
-import { getFullDetailsOfCourse } from "../Services/Operations/courseDetailsAPI"
+import CourseReviewModal from "../Components/core/ViewCourse/CourseReviewModal";
+import VideoDetailsSidebar from "../Components/core/ViewCourse/VideoDetailsSidebar";
+import { getFullDetailsOfCourse } from "../Services/operations/courseDetailsAPI";
 import {
   setCompletedLectures,
   setCourseSectionData,
   setEntireCourseData,
   setTotalNoOfLectures,
-} from "../Slices/viewCourseSlice"
+} from "../Slices/viewCourseSlice";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Outlet, useParams } from "react-router-dom";
 
 export default function ViewCourse() {
-  const { courseId } = useParams()
-  const { token } = useSelector((state) => state.auth)
-  const dispatch = useDispatch()
-  const [reviewModal, setReviewModal] = useState(false)
+  const { courseId } = useParams();
+  const { token } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const [reviewModal, setReviewModal] = useState(false);
 
   useEffect(() => {
-    ;(async () => {
-      const courseData = await getFullDetailsOfCourse(courseId, token)
+    (async () => {
+      const courseData = await getFullDetailsOfCourse(courseId, token);
       // console.log("Course Data here... ", courseData.courseDetails)
-      dispatch(setCourseSectionData(courseData.courseDetails.courseContent))
-      dispatch(setEntireCourseData(courseData.courseDetails))
-      dispatch(setCompletedLectures(courseData.completedVideos))
-      let lectures = 0
+      dispatch(setCourseSectionData(courseData.courseDetails.courseContent));
+      dispatch(setEntireCourseData(courseData.courseDetails));
+      dispatch(setCompletedLectures(courseData.completedVideos));
+      let lectures = 0;
       courseData?.courseDetails?.courseContent?.forEach((sec) => {
-        lectures += sec.subSection.length
-      })
-      dispatch(setTotalNoOfLectures(lectures))
-    })()
+        lectures += sec.subSection.length;
+      });
+      dispatch(setTotalNoOfLectures(lectures));
+    })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   return (
     <>
@@ -46,5 +45,5 @@ export default function ViewCourse() {
       </div>
       {reviewModal && <CourseReviewModal setReviewModal={setReviewModal} />}
     </>
-  )
+  );
 }

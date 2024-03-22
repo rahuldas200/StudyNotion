@@ -1,41 +1,40 @@
-import { useEffect, useState } from "react"
-import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
-
-import { fetchInstructorCourses } from "../../../Services/Operations/courseDetailsAPI"
-import { getInstructorData } from "../../../Services/Operations/profileAPI"
-import InstructorChart from "./InstructorDashboard/InstructorChart"
+import { fetchInstructorCourses } from "../../../Services/operations/courseDetailsAPI";
+import { getInstructorData } from "../../../Services/operations/profileAPI";
+import InstructorChart from "./InstructorDashboard/InstructorChart";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function Instructor() {
-  const { token } = useSelector((state) => state.auth)
-  const { user } = useSelector((state) => state.profile)
-  const [loading, setLoading] = useState(false)
-  const [instructorData, setInstructorData] = useState(null)
-  const [courses, setCourses] = useState([])
+  const { token } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.profile);
+  const [loading, setLoading] = useState(false);
+  const [instructorData, setInstructorData] = useState(null);
+  const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    ;(async () => {
-      setLoading(true)
-      const instructorApiData = await getInstructorData(token)
-      const result = await fetchInstructorCourses(token)
-      console.log(instructorApiData)
-      if (instructorApiData.length) setInstructorData(instructorApiData)
+    (async () => {
+      setLoading(true);
+      const instructorApiData = await getInstructorData(token);
+      const result = await fetchInstructorCourses(token);
+      console.log(instructorApiData);
+      if (instructorApiData.length) setInstructorData(instructorApiData);
       if (result) {
-        setCourses(result)
+        setCourses(result);
       }
-      setLoading(false)
-    })()
-  }, [])
+      setLoading(false);
+    })();
+  }, []);
 
   const totalAmount = instructorData?.reduce(
     (acc, curr) => acc + curr.totalAmountGenerated,
     0
-  )
+  );
 
   const totalStudents = instructorData?.reduce(
     (acc, curr) => acc + curr.totalStudentsEnrolled,
     0
-  )
+  );
 
   return (
     <div>
@@ -138,5 +137,5 @@ export default function Instructor() {
         </div>
       )}
     </div>
-  )
+  );
 }

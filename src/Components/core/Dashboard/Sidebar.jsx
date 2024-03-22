@@ -1,5 +1,5 @@
+import { logout } from "../../../Services/operations/authAPI";
 import { sidebarLinks } from "../../../data/dashboard-links";
-import { logout } from "../../../Services/Operations/authAPI";
 import ConfirmationModal from "../../Common/ConfirmationModal";
 import SidebarLink from "./SidebarLink";
 import { useState } from "react";

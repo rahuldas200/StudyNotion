@@ -1,4 +1,4 @@
-import { fetchInstructorCourses } from "../../../Services/Operations/courseDetailsAPI";
+import { fetchInstructorCourses } from "../../../Services/operations/courseDetailsAPI";
 import IconBtn from "../../Common/IconBtn";
 import CoursesTable from "./InstructorCourses/CoursesTable";
 import { useEffect, useState } from "react";

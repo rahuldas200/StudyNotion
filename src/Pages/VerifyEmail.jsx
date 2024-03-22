@@ -1,10 +1,10 @@
+import { sendOtp, signUp } from "../Services/operations/authAPI";
 import { useEffect, useState } from "react";
-import OtpInput from "react-otp-input";
-import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
 import { RxCountdownTimer } from "react-icons/rx";
+import OtpInput from "react-otp-input";
 import { useDispatch, useSelector } from "react-redux";
-import { sendOtp, signUp } from "../Services/Operations/authAPI";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function VerifyEmail() {

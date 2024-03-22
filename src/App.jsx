@@ -27,7 +27,7 @@ import Signup from "./Pages/Signup";
 import UpdatePassword from "./Pages/UpdatePassword";
 import VerifyEmail from "./Pages/VerifyEmail";
 import ViewCourse from "./Pages/ViewCourse";
-import { getUserDetails } from "./Services/Operations/profileAPI";
+import { getUserDetails } from "./Services/operations/profileAPI";
 import { ACCOUNT_TYPE } from "./utils/constants";
 // Redux
 import { useDispatch, useSelector } from "react-redux";

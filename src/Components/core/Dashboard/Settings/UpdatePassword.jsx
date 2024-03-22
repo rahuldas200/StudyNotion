@@ -1,4 +1,4 @@
-import { changePassword } from "../../../../Services/Operations/SettingsAPI";
+import { changePassword } from "../../../../Services/operations/SettingsAPI";
 import IconBtn from "../../../Common/IconBtn";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
