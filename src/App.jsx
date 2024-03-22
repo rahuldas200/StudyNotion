@@ -1,5 +1,18 @@
 import { useEffect } from "react";
 import "./App.css";
+// Components
+import Navbar from "./Components/Common/Navbar";
+import OpenRoute from "./Components/core/Auth/OpenRoute";
+import PrivateRoute from "./Components/core/Auth/PrivateRoute";
+import AddCourse from "./Components/core/Dashboard/AddCourse";
+import Cart from "./Components/core/Dashboard/Cart";
+import EditCourse from "./Components/core/Dashboard/EditCourse";
+import EnrolledCourses from "./Components/core/Dashboard/EnrolledCourses";
+import Instructor from "./Components/core/Dashboard/Instructor";
+import MyCourses from "./Components/core/Dashboard/MyCourses";
+import MyProfile from "./Components/core/Dashboard/MyProfile";
+import Settings from "./Components/core/Dashboard/Settings";
+import VideoDetails from "./Components/core/ViewCourse/VideoDetails";
 import About from "./Pages/About";
 import Catalog from "./Pages/Catalog";
 import Contact from "./Pages/Contact";
@@ -14,21 +27,8 @@ import Signup from "./Pages/Signup";
 import UpdatePassword from "./Pages/UpdatePassword";
 import VerifyEmail from "./Pages/VerifyEmail";
 import ViewCourse from "./Pages/ViewCourse";
-// Components
-import Navbar from "./Components/Common/Navbar";
-import OpenRoute from "./Components/core/Auth/OpenRoute";
-import PrivateRoute from "./Components/core/Auth/PrivateRoute";
-import AddCourse from "./Components/core/Dashboard/AddCourse";
-import Cart from "./Components/core/Dashboard/Cart";
-import EditCourse from "./Components/core/Dashboard/EditCourse";
-import EnrolledCourses from "./Components/core/Dashboard/EnrolledCourses";
-import Instructor from "./Components/core/Dashboard/Instructor";
-import MyCourses from "./Components/core/Dashboard/MyCourses";
-import MyProfile from "./Components/core/Dashboard/MyProfile";
-import Settings from "./Components/core/Dashboard/Settings";
-import VideoDetails from "./Components/core/ViewCourse/VideoDetails";
 import { getUserDetails } from "./Services/Operations/profileAPI";
-import { ACCOUNT_TYPE } from "./Utils/constants";
+import { ACCOUNT_TYPE } from "./utils/constants";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 // React Router

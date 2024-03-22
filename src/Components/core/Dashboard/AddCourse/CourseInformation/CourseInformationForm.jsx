@@ -4,7 +4,7 @@ import {
   fetchCourseCategories,
 } from "../../../../../Services/Operations/courseDetailsAPI";
 import { setCourse, setStep } from "../../../../../Slices/courseSlice";
-import { COURSE_STATUS } from "../../../../../Utils/constants";
+import { COURSE_STATUS } from "../../../../../utils/constants";
 import IconBtn from "../../../../Common/IconBtn";
 import Upload from "../Upload";
 import ChipInput from "./ChipInput";

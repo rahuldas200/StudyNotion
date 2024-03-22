@@ -1,15 +1,14 @@
-import { useEffect, useState } from "react"
-import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai"
-import { BsChevronDown } from "react-icons/bs"
-import { useSelector } from "react-redux"
-import { Link, matchPath, useLocation } from "react-router-dom"
-
-import logo from "../../assets/Logo/Logo-Full-Light.png"
-import { NavbarLinks } from "../../data/navbar-links"
-import { apiConnector } from "../../Services/apiConnector"
-import { categories } from "../../Services/apis"
-import { ACCOUNT_TYPE } from "../../Utils/constants"
-import ProfileDropdown from "../core/Auth/ProfileDropdown"
+import { apiConnector } from "../../Services/apiConnector";
+import { categories } from "../../Services/apis";
+import logo from "../../assets/Logo/Logo-Full-Light.png";
+import { NavbarLinks } from "../../data/navbar-links";
+import { ACCOUNT_TYPE } from "../../utils/constants";
+import ProfileDropdown from "../core/Auth/ProfileDropdown";
+import { useEffect, useState } from "react";
+import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
+import { BsChevronDown } from "react-icons/bs";
+import { useSelector } from "react-redux";
+import { Link, matchPath, useLocation } from "react-router-dom";
 
 const subLinks = [
   {
@@ -31,13 +30,13 @@ const subLinks = [
 ];
 
 function Navbar() {
-  const { token } = useSelector((state) => state.auth)
-  const { user } = useSelector((state) => state.profile)
-  const { totalItems } = useSelector((state) => state.cart)
-  const location = useLocation()
+  const { token } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.profile);
+  const { totalItems } = useSelector((state) => state.cart);
+  const location = useLocation();
 
   // const [subLinks, setSubLinks] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
   //   ;(async () => {
@@ -55,8 +54,8 @@ function Navbar() {
   // console.log("sub links", subLinks)
 
   const matchRoute = (route) => {
-    return matchPath({ path: route }, location.pathname)
-  }
+    return matchPath({ path: route }, location.pathname);
+  };
 
   return (
     <div
@@ -164,7 +163,7 @@ function Navbar() {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
