@@ -1,5 +1,5 @@
 import { formattedDate } from "../../../utils/dateFormatter";
-import IconBtn from "../../common/IconBtn";
+import IconBtn from "../../Common/IconBtn";
 import { RiEditBoxLine } from "react-icons/ri";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";

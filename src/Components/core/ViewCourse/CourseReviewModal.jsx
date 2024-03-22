@@ -1,5 +1,5 @@
 import { createRating } from "../../../services/operations/courseDetailsAPI";
-import IconBtn from "../../common/IconBtn";
+import IconBtn from "../../Common/IconBtn";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { RxCross2 } from "react-icons/rx";

@@ -1,6 +1,6 @@
 import { sidebarLinks } from "../../../data/dashboard-links";
 import { logout } from "../../../services/operations/authAPI";
-import ConfirmationModal from "../../common/ConfirmationModal";
+import ConfirmationModal from "../../Common/ConfirmationModal";
 import SidebarLink from "./SidebarLink";
 import { useState } from "react";
 import { VscSignOut } from "react-icons/vsc";

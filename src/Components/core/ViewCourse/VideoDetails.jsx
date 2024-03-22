@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "video-react/dist/video-react.css";
 import { markLectureAsComplete } from "../../../services/operations/courseDetailsAPI";
 import { updateCompletedLectures } from "../../../slices/viewCourseSlice";
-import IconBtn from "../../common/IconBtn";
+import IconBtn from "../../Common/IconBtn";
 import { useLocation } from "react-router-dom";
 import { BigPlayButton, Player } from "video-react";
 

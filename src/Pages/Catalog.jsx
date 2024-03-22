@@ -1,8 +1,8 @@
-// import CourseCard from "../components/Catalog/CourseCard"
-// import CourseSlider from "../components/Catalog/CourseSlider"
-import Footer from "../components/common/Footer";
-import Course_Card from "../components/core/Catalog/Course_Card";
-import Course_Slider from "../components/core/Catalog/Course_Slider";
+// import CourseCard from "../Components/Catalog/CourseCard"
+// import CourseSlider from "../Components/Catalog/CourseSlider"
+import Footer from "../Components/Common/Footer";
+import Course_Card from "../Components/core/Catalog/Course_Card";
+import Course_Slider from "../Components/core/Catalog/Course_Slider";
 import { apiConnector } from "../services/apiConnector";
 import { categories } from "../services/apis";
 import { getCatalogPageData } from "../services/operations/pageAndComponntDatas";

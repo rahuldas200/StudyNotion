@@ -8,7 +8,7 @@ import {
   fetchInstructorCourses,
 } from "../../../../services/operations/courseDetailsAPI";
 import { COURSE_STATUS } from "../../../../utils/constants";
-import ConfirmationModal from "../../../common/ConfirmationModal";
+import ConfirmationModal from "../../../Common/ConfirmationModal";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { FiEdit2 } from "react-icons/fi";

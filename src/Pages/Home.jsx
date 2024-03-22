@@ -3,15 +3,15 @@
 // Image and Video Import
 import Banner from "../assets/Images/banner.mp4";
 // Component Imports
-import Footer from "../components/common/Footer";
-import ReviewSlider from "../components/common/ReviewSlider";
-import CTAButton from "../components/core/HomePage/Button";
-import CodeBlocks from "../components/core/HomePage/CodeBlocks";
-import ExploreMore from "../components/core/HomePage/ExploreMore";
-import HighlightText from "../components/core/HomePage/HighlightText";
-import InstructorSection from "../components/core/HomePage/InstructorSection";
-import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
-import TimelineSection from "../components/core/HomePage/Timeline";
+import Footer from "../Components/Common/Footer";
+import ReviewSlider from "../Components/Common/ReviewSlider";
+import CTAButton from "../Components/core/HomePage/Button";
+import CodeBlocks from "../Components/core/HomePage/CodeBlocks";
+import ExploreMore from "../Components/core/HomePage/ExploreMore";
+import HighlightText from "../Components/core/HomePage/HighlightText";
+import InstructorSection from "../Components/core/HomePage/InstructorSection";
+import LearningLanguageSection from "../Components/core/HomePage/LearningLanguageSection";
+import TimelineSection from "../Components/core/HomePage/Timeline";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 

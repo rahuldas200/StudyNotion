@@ -1,8 +1,8 @@
-import ConfirmationModal from "../components/common/ConfirmationModal";
-import Footer from "../components/common/Footer";
-import RatingStars from "../components/common/RatingStars";
-import CourseAccordionBar from "../components/core/Course/CourseAccordionBar";
-import CourseDetailsCard from "../components/core/Course/CourseDetailsCard";
+import ConfirmationModal from "../Components/Common/ConfirmationModal";
+import Footer from "../Components/Common/Footer";
+import RatingStars from "../Components/Common/RatingStars";
+import CourseAccordionBar from "../Components/core/Course/CourseAccordionBar";
+import CourseDetailsCard from "../Components/core/Course/CourseDetailsCard";
 import { formatDate } from "../services/formatDate";
 import { fetchCourseDetails } from "../services/operations/courseDetailsAPI";
 import { BuyCourse } from "../services/operations/studentFeaturesAPI";

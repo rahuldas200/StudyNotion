@@ -7,7 +7,7 @@ import {
   setEditCourse,
   setStep,
 } from "../../../../../slices/courseSlice";
-import IconBtn from "../../../../common/IconBtn";
+import IconBtn from "../../../../Common/IconBtn";
 import NestedView from "./NestedView";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

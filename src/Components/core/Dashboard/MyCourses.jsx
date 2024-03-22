@@ -1,5 +1,5 @@
 import { fetchInstructorCourses } from "../../../services/operations/courseDetailsAPI";
-import IconBtn from "../../common/IconBtn";
+import IconBtn from "../../Common/IconBtn";
 import CoursesTable from "./InstructorCourses/CoursesTable";
 import { useEffect, useState } from "react";
 import { VscAdd } from "react-icons/vsc";

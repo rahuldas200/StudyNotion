@@ -1,7 +1,7 @@
-import Footer from "../components/common/Footer";
-import ReviewSlider from "../components/common/ReviewSlider";
-import ContactDetails from "../components/core/ContactUsPage/ContactDetails";
-import ContactForm from "../components/core/ContactUsPage/ContactForm";
+import Footer from "../Components/Common/Footer";
+import ReviewSlider from "../Components/Common/ReviewSlider";
+import ContactDetails from "../Components/core/ContactUsPage/ContactDetails";
+import ContactForm from "../Components/core/ContactUsPage/ContactForm";
 import React from "react";
 
 const Contact = () => {

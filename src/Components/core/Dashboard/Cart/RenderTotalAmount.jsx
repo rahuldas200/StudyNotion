@@ -1,5 +1,5 @@
 import { BuyCourse } from "../../../../services/operations/studentFeaturesAPI";
-import IconBtn from "../../../common/IconBtn";
+import IconBtn from "../../../Common/IconBtn";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 

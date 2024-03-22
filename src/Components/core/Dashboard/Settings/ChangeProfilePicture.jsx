@@ -1,5 +1,5 @@
 import { updateDisplayPicture } from "../../../../services/operations/SettingsAPI";
-import IconBtn from "../../../common/IconBtn";
+import IconBtn from "../../../Common/IconBtn";
 import { useEffect, useRef, useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";

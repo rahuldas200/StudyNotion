@@ -1,5 +1,5 @@
 import { changePassword } from "../../../../services/operations/SettingsAPI";
-import IconBtn from "../../../common/IconBtn";
+import IconBtn from "../../../Common/IconBtn";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
