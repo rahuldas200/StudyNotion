@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import "./App.css";
 // Components
 import Navbar from "./Components/Common/Navbar";
-import OpenRoute from "./Components/Core/Auth/OpenRoute";
-import PrivateRoute from "./Components/Core/Auth/PrivateRoute";
 import AddCourse from "./Components/Core/Dashboard/AddCourse";
 import Cart from "./Components/Core/Dashboard/Cart";
 import EditCourse from "./Components/Core/Dashboard/EditCourse";
@@ -13,6 +11,8 @@ import MyCourses from "./Components/Core/Dashboard/MyCourses";
 import MyProfile from "./Components/Core/Dashboard/MyProfile";
 import Settings from "./Components/Core/Dashboard/Settings";
 import VideoDetails from "./Components/Core/ViewCourse/VideoDetails";
+import OpenRoute from "./Components/Core/auth/OpenRoute";
+import PrivateRoute from "./Components/Core/auth/PrivateRoute";
 import About from "./Pages/About";
 import Catalog from "./Pages/Catalog";
 import Contact from "./Pages/Contact";

@@ -3,7 +3,7 @@ import { categories } from "../../Services/apis";
 import logo from "../../assets/Logo/Logo-Full-Light.png";
 import { NavbarLinks } from "../../data/navbar-links";
 import { ACCOUNT_TYPE } from "../../utils/constants";
-import ProfileDropdown from "../Core/Auth/ProfileDropdown";
+import ProfileDropdown from "../Core/auth/ProfileDropdown";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";

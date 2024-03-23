@@ -1,5 +1,5 @@
-import loginImg from "../assets/Images/login.webp"
-import Template from "../Components/Core/Auth/Template"
+import Template from "../Components/Core/auth/Template";
+import loginImg from "../assets/Images/login.webp";
 
 function Login() {
   return (
@@ -10,7 +10,7 @@ function Login() {
       image={loginImg}
       formType="login"
     />
-  )
+  );
 }
 
-export default Login
+export default Login;
